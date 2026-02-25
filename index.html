@@ -1,0 +1,1187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Frontend Developer in Gujarat | Animated Websites with GSAP – Shubham Nayani</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Frontend developer in India specializing in high-performance, animated websites using HTML, CSS, JavaScript & GSAP. Available for freelance projects.">
+<link rel="icon" href="favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+<meta name="theme-color" content="#050505">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Shubham Nayani",
+  "jobTitle": "Frontend Developer",
+  "url": "https://shubhamnayani01.com",
+  "sameAs": [
+    "https://www.instagram.com/shubhm_nayani",
+    "https://www.github.com/shubhamnayani01"
+  ],
+  "address": {
+    "@type": "PostalAddress",
+    "addressRegion": "Gujarat",
+    "addressCountry": "IN"
+  },
+  "knowsAbout": [
+    "HTML",
+    "CSS",
+    "JavaScript",
+    "GSAP",
+    "Frontend Development",
+    "Web Animation"
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How much does a website cost in India?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The cost depends on the scope. A simple landing page starts at ₹1,000, while a full business website typically ranges from ₹5,000 to ₹40,000 depending on design, animations, and features."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How long does it take to build a business website?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Most standard business websites take 1 to 2 weeks to complete, depending on content readiness and required features."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you provide website hosting?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. I can help set up hosting on your own account or manage hosting and maintenance for a small monthly fee."
+      }
+    }
+  ]
+}
+</script>
+
+<style>
+:root {
+    --bg: #050505;
+    --card-bg: #111111;
+    --text-main: #ffffff;
+    --text-muted: #888888;
+    --accent: #fff;
+    --border: #222;
+    --gold: #FFD700;
+}
+
+* {margin:0; padding:0; box-sizing:border-box; font-family: 'Inter', sans-serif;}
+
+html {scroll-behavior: smooth;}
+body {background: var(--bg); color: var(--text-main); overflow-x: hidden; position: relative;}
+
+/* NOISE OVERLAY */
+.noise {
+    position: fixed; 
+    top: 0;
+    left: 0;
+    width: 100%; 
+    height: 100%;
+    pointer-events: none; 
+    z-index: -1; 
+    opacity: 0.05;
+    background: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='1'/%3E%3C/svg%3E");
+}
+
+a {text-decoration: none; 
+    color: inherit; 
+    transition: 0.3s;
+}
+
+
+/* NAVIGATION */
+nav {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 12px 28px;
+  background: rgba(20, 20, 20, 0.7);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 100px;
+
+  display: flex;
+  align-items: center;
+  gap: 40px;
+
+  width: fit-content;
+  max-width: none;
+  z-index: 10;
+}
+
+ul {list-style: none;
+margin: 0;
+padding: 0;
+}
+
+.nav-logo {font-weight: 700; 
+    font-size: 0.8rem;
+    white-space: nowrap; 
+    letter-spacing: -0.02em;
+}
+
+.nav-links{
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    display: inline-block;
+    font-size: 0.85rem;
+    color: #bbb;
+    opacity: 1;
+    margin-left: 0;
+    font-weight: 500;
+    visibility: visible;
+}
+.nav-links a:hover,
+.nav-links a:focus { color: #fff; }
+
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -6px;
+  width: 0;
+  height: 2px;
+  background: #fff;
+  transform: translateX(-50%);
+  transition: width 0.25s ease;
+}
+
+.nav-links a.active::after {
+  width: 60%;
+}   
+
+/* HERO */
+.hero {
+    min-height: 100vh; 
+    padding: 0 10%;
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center;
+    text-align: center;
+    background: radial-gradient(circle at 50% 50%, #1a1a1a 0%, #050505 50%);
+}
+.badge {
+    padding: 6px 14px; 
+    border: 1px solid #333; 
+    border-radius: 30px;
+    font-size: 0.75rem; 
+    color: #ccc; 
+    margin-bottom: 25px;
+    background: rgba(255,255,255,0.03);
+}
+.hero h1 {
+    font-size: clamp(2.5rem, 5vw, 4.5rem);
+    max-width: 900px; line-height: 1.1; letter-spacing: -0.03em;
+    background: linear-gradient(to bottom right, #fff, #888);
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+}
+.hero p {margin-top: 25px; color: var(--text-muted); max-width: 500px; line-height: 1.6;}
+
+.btn-group {margin-top: 40px; display: flex; gap: 15px;}
+.btn {
+    padding: 14px 32px; border-radius: 100px; font-weight: 500; font-size: 0.95rem;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+.btn-primary {background: #fff; color: #000;}
+.btn-primary:hover {transform: translateY(-2px); box-shadow: 0 10px 20px rgba(255,255,255,0.15);}
+.btn-secondary {border: 1px solid #333; color: #fff; background: transparent;}
+.btn-secondary:hover {border-color: #fff;}
+
+/* SECTIONS GLOBAL */
+section {position: relative; z-index: 1; padding: 140px 10%; max-width: 1400px; margin: 0 auto;}
+.section-header {margin-bottom: 60px;}
+.section-title {font-size: 2rem; margin-bottom: 15px;}
+.section-sub {color: var(--text-muted); max-width: 400px;}
+
+/* SERVICES & REVIEWS GRID */
+.services-grid, .reviews-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px;
+}
+.service-card, .review-card {
+    background: var(--card-bg); padding: 40px; border-radius: 20px;
+    border: 1px solid var(--border); transition: 0.3s;
+    display: flex; flex-direction: column; justify-content: center;
+}
+.service-card:hover, .review-card:hover {transform: translateY(-10px); border-color: #444; background: #161616; box-shadow: 0 20px 40px rgba(0,0,0,0.4);}
+.service-icon {font-size: 1.5rem; margin-bottom: 20px; display: block;}
+.service-card h3 {margin-bottom: 10px; font-weight: 500;}
+.service-card p, .review-card p {color: var(--text-muted); font-size: 0.9rem; line-height: 1.5;}
+
+/* REVIEWS SPECIFIC */
+.stars {color: var(--gold); margin-bottom: 15px; font-size: 1.1rem;}
+.review-author {margin-top: 20px; display: flex; align-items: center; gap: 12px;}
+.author-avatar {width: 40px; height: 40px; border-radius: 50%; background: #333;}
+.author-info h4 {font-size: 0.9rem; color: #fff;}
+.author-info span {font-size: 0.8rem; color: #666;}
+
+/* PROJECTS */
+.projects-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 40px;
+}
+.project-card { cursor: pointer; }
+.project-img {
+    height: 280px; background: #1a1a1a; border-radius: 20px;
+    margin-bottom: 20px; overflow: hidden; position: relative;
+    border: 1px solid var(--border);
+}
+
+.project-case p {
+  font-size: 0.85rem;
+  color: #f2f2f2;
+  line-height: 1.5;
+  margin-bottom: 6px;
+}
+
+.project-case strong {
+  color: #fff;
+  font-weight: 500;
+}
+
+.project-img img {
+    width: 100%; height: 100%; object-fit: cover;
+    transition: transform 0.5s ease; opacity: 0.8;
+}
+.project-card:hover .project-img img {transform: scale(1.05); opacity: 1;}
+.project-info h3 {font-size: 1.4rem; margin-bottom: 8px;}
+.project-info p {color: var(--text-muted); font-size: 0.9rem; margin-bottom: 15px;}
+.tags span {
+    font-size: 0.75rem; padding: 4px 10px; border: 1px solid #333;
+    border-radius: 20px; color: #aaa; margin-right: 6px;
+}
+
+/* ABOUT SECTION STYLES */
+/* LOGO FRAME — CLEAN & INTENTIONAL */
+.logo-frame {
+  background: #f2f2f2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo-frame img {
+  max-width: 140px;
+  max-height: 140px;
+  object-fit: contain;
+  transition: transform 0.5s ease; opacity: 0.8;
+}
+
+.about-container {
+    display: grid;
+    grid-template-columns: 0.8fr 1.2fr;
+    gap: 80px;
+    align-items: center;
+}
+.about-img-wrapper {
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    border: 1px solid #333;
+    height: 500px;
+}
+.about-photo {
+    width: 100%; height: 100%; object-fit: cover;
+    filter: grayscale(100%);
+    transition: filter 0.5s ease, transform 0.5s ease;
+}
+.about-img-wrapper:hover .about-photo {
+    filter: grayscale(0%);
+    transform: scale(1.05);
+}
+.about-title { font-size: 3rem; line-height: 1.1; margin-bottom: 30px; }
+.about-title span { color: #666; }
+.about-desc {
+    color: #aaa; line-height: 1.7; font-size: 1rem; max-width: 90%;
+}
+.about-desc strong { color: #fff; font-weight: 500; }
+.about-details {
+    display: grid; grid-template-columns: 1fr 1fr;
+    gap: 30px; margin-top: 40px; padding-top: 30px;
+    border-top: 1px solid #222;
+}
+.detail-item span {
+    display: block; font-size: 0.75rem; text-transform: uppercase;
+    letter-spacing: 1px; color: #666; margin-bottom: 8px;
+}
+.detail-item h4 { font-size: 1rem; color: #fff; font-weight: 500; }
+
+/* PROCESS SECTION STYLES */
+.process { border-top: 1px solid #222; padding: 80px 10%; }
+.process-grid {
+    max-width: 1100px; margin: 0 auto;
+    display: grid; grid-template-columns: repeat(4, 1fr); gap: 60px;
+}
+.process-step { transition: transform 0.25s ease, opacity 0.25s ease; }
+.step-number {
+    display: block; font-size: 0.8rem; color: #666;
+    margin-bottom: 10px; letter-spacing: 1px;
+}
+.process-step h3 { font-size: 1.1rem; font-weight: 500; color: #fff; }
+.process-step:hover { transform: translateY(-4px); opacity: 1; }
+
+/* JOURNEY */
+.journey-grid {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
+}
+
+.journey-card {
+  background: linear-gradient(
+    180deg,
+    rgba(255,255,255,0.05),
+    rgba(255,255,255,0.02)
+  );
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 20px;
+  padding: 30px;
+
+  /* BASE DEPTH */
+  box-shadow:
+    0 10px 30px rgba(0, 0, 0, 0.25),
+    inset 0 1px 0 rgba(255, 255, 255, 0.04);
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.journey-card:hover {
+  transform: translateY(-8px);
+  filter: drop-shadow(0 0 12px rgba(0, 198, 255, 0.15));
+
+  /* HOVER DEPTH */
+  box-shadow:
+    0 25px 60px rgba(0, 0, 0, 0.45),
+    0 0 0 1px rgba(255, 255, 255, 0.12),
+    inset 0 1px 0 rgba(255, 255, 255, 0.06);
+
+  border-color: rgba(255,255,255,0.25);
+}
+
+.journey-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.journey-date {
+  font-size: 0.75rem;
+  padding: 6px 12px;
+  border-radius: 20px;
+  background: rgba(255,255,255,0.08);
+  color: #ccc;
+  letter-spacing: 0.5px;
+}
+
+.journey-arrow {
+  font-size: 1.2rem;
+  color: #00c6ff;
+}
+
+.journey-card h3 {
+  font-size: 1.3rem;
+  margin-bottom: 6px;
+}
+
+.journey-card h4 {
+  font-size: 0.9rem;
+  font-weight: 400;
+  color: #888;
+  margin-bottom: 16px;
+}
+
+.journey-card p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #aaa;
+  margin-bottom: 20px;
+}
+
+.journey-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.journey-tags span {
+  font-size: 0.7rem;
+  padding: 6px 12px;
+  border-radius: 20px;
+  background: rgba(255,255,255,0.06);
+  color: #ddd;
+}
+
+/* FAQ STYLES */
+.faq-item { border-bottom: 1px solid #222; padding: 18px 0; }
+.faq-question {
+    width: 100%; background: none; border: none;
+    color: #fff; font-size: 1rem; font-weight: 500;
+    display: flex; justify-content: space-between; align-items: center;
+    cursor: pointer; padding: 14px 0; text-align: left;
+}
+.plus { font-size: 1.4rem; transition: transform 0.3s ease; }
+.faq-answer {
+    height: 0; overflow: hidden; color: #aaa;
+    font-size: 0.95rem; line-height: 1.6; opacity: 0;
+    transition: height 0.4s ease, opacity 0.25s ease;
+}
+.faq-item.active .faq-answer {opacity: 1; padding-top: 10px; }
+.faq-item.active .plus { transform: rotate(45deg); }
+
+/* CONTACT */
+.cta-section {
+    text-align: center; background: #111; padding: 80px;
+    border-radius: 30px; border: 1px solid #222;
+}
+.cta-section h2 {font-size: 2.5rem; margin-bottom: 20px;}
+.contact-links {margin-top: 30px; display: flex; justify-content: center; gap: 20px;}
+
+
+    /* HERO SECTION */
+    #social {
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+      position: relative;
+      padding: 80px 0;
+      animation: heroFade 0.8s ease-out both;
+    }
+
+    @keyframes socialFade {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .social-text {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .social-text h1 {
+      font-size: clamp(2.4rem, 4vw, 3.6rem);
+      font-weight: 700;
+    }
+
+    .social-text p {
+      margin-top: 10px;
+      opacity: 0.7;
+      letter-spacing: 0.5px;
+    }
+
+    /* CARDS */
+    #cards {
+      width: 70%;
+      display: flex;
+      gap: 30px;
+      padding: 20px;
+      flex-wrap: wrap;
+    }
+
+    .card {
+      min-width: 200px;
+      height: 350px;
+      flex: 1 1 250px;
+      position: relative;
+      border-radius: 14px;
+      background: rgba(255,255,255,0.12);
+      overflow: hidden;
+
+      --mouse-x: 50%;
+      --mouse-y: 50%;
+
+      transition:
+        transform 0.15s ease,
+        box-shadow 0.15s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-10px) scale(1.02);
+      box-shadow:
+        0 30px 60px rgba(0,0,0,0.6),
+        0 0 40px hsl(var(--color) / 0.4);
+    }
+
+    /* STRONG GLOW */
+    #cards:hover > .card {
+      background: radial-gradient(
+        600px circle at var(--mouse-x) var(--mouse-y),
+        hsl(var(--color) / 1),
+        rgba(255,255,255,0.1) 35%
+      );
+    }
+
+    .card::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(
+        750px circle at var(--mouse-x) var(--mouse-y),
+        hsl(var(--color) / 0.55),
+        transparent 45%
+      );
+      opacity: 0;
+      transition: opacity 0.08s linear;
+    }
+
+    #cards:hover > .card::before {
+      opacity: 1;
+    }
+
+    .card_content {
+      position: relative;
+      z-index: 5;
+      inset: 1px;
+      height: calc(100% - 2px);
+      border-radius: inherit;
+      background: #131315;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 18px;
+      text-align: center;
+    }
+
+    .card_content i {
+      font-size: 5rem;
+      color: rgba(255,255,255,0.55);
+    }
+
+    .card_content p {
+      opacity: 0.6;
+    }
+
+    .card_content a {
+      width: 90%;
+      padding: 0.8rem 0;
+      border-radius: 8px;
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.15);
+      color: white;
+      text-decoration: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 8px;
+      transition: 0.12s ease;
+    }
+
+    .card_content a:hover {
+      background: rgba(255,255,255,0.14);
+      border-color: rgba(255,255,255,0.35);
+    }
+
+    /* image sec.*/
+    .card_content img {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  margin-bottom: 10px;
+}
+
+.card_content img {
+  filter: drop-shadow(0 6px 12px rgba(0,0,0,0.4));
+}
+
+    /* COLORS */
+    .card:nth-child(1) { --color: 348 80% 60%; }
+    .card:nth-child(2) { --color: 0 0% 100%; }
+    .card:nth-child(3) { --color: 220 100% 40%; }
+
+    /* SCROLL HINT */
+    .scroll-down {
+      position: absolute;
+      bottom: 30px;
+      font-size: 0.9rem;
+      opacity: 0.6;
+      animation: bounce 1.6s infinite;
+    }
+
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(6px); }
+    }
+
+    @media (max-width: 900px) {
+      #cards {
+        width: 90%;
+      }
+    }
+
+#scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 3px;
+  width: 0%;
+  background: linear-gradient(90deg, #ffffff, #888888);
+  z-index: 9999;
+  transition: width 0.1s linear;
+}
+
+
+#sticky-cta {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  padding: 14px 26px;
+  background: #ffffff;
+  color: #000000;
+  font-weight: 500;
+  font-size: 0.9rem;
+  border-radius: 100px;
+  box-shadow: 0 10px 30px rgba(255,255,255,0.2);
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(20px);
+  transition: all 0.3s ease;
+  z-index: 999;
+}
+
+#sticky-cta.show {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+/* FOOTER */
+footer {
+    padding: 50px 10%; border-top: 1px solid #222;
+    display: flex; justify-content: space-between; color: #555; font-size: 0.85rem;
+}
+
+/* RESPONSIVE */
+@media(max-width: 900px) {
+    .about-container { grid-template-columns: 1fr; gap: 50px; }
+    .about-img-wrapper { height: 400px; order: 2; }
+    .about-title { font-size: 2.2rem; }
+    .process-grid { grid-template-columns: 1fr 1fr; gap: 40px; }
+}
+@media (max-width: 768px) {
+    nav {padding: 12px 20px;}
+    .hero {padding: 120px 5% 60px;}
+    .hero h1 {font-size: 2.5rem;}
+    .btn-group {flex-direction: column; width: 100%;}
+    .btn {width: 100%; text-align: center;}
+    .cta-section {padding: 40px 20px;}
+    footer {flex-direction: column; gap: 20px; text-align: center;}
+    .faq-question { font-size: 1rem; padding: 18px 0; }
+}
+@media (max-width: 500px) {
+    .process-grid { grid-template-columns: 1fr; gap: 30px; }
+}
+</style>
+</head>
+
+<body>
+  
+<div id="scroll-progress"></div>
+<div class="noise"></div>
+
+<nav>
+    <div class="nav-logo">SHUBHAM NAYANI</div>
+    <div class="nav-links">
+        <a href="#work">Work</a>
+        <a href="#services">Services</a>
+        <a href="#reviews">Reviews</a>
+        <a href="#contact">Contact</a>
+    </div>
+</nav>
+
+<div class="hero">
+    <div class="badge">Available for freelance work</div>
+    <h1>Frontend Developer in Gujarat Building Animated, High-Performance Websites.</h1>
+    <p>I’m a freelance frontend developer in Gujarat, India, specializing in fast, SEO-friendly
+business websites with smooth GSAP animations that convert visitors into customers.</p>
+    <div class="btn-group">
+        <a href="#contact" class="btn btn-primary">Start a Project</a>
+        <a href="#work" class="btn btn-secondary">View Work</a>
+    </div>
+</div>
+
+<section id="services">
+    <div class="section-header">
+        <h2 class="section-title">Frontend Development Services</h2>
+        <p class="section-sub">Focusing on results, not just code.</p>
+    </div>
+    <div class="services-grid">
+        
+        <div class="service-card">
+            <span class="service-icon">⚡</span>
+            <h3>Performance First</h3>
+            <p>Sites that load in milliseconds. Google loves them, and so will your customers.</p>
+        </div>
+        <div class="service-card">
+            <span class="service-icon">✨</span>
+            <h3>Fluid Animation</h3>
+            <p>Using GSAP to create premium, silky-smooth interactions that build trust.</p>
+        </div>
+        <div class="service-card">
+            <span class="service-icon">📱</span>
+            <h3>Responsive Design</h3>
+            <p>Flawless experience on every device, from 4K monitors to mobile phones.</p>
+        </div>
+        <div class="service-card">
+            <span class="service-icon">🔍</span>
+            <h3>Technical SEO</h3>
+            <p>Semantic HTML and optimization structure to help you rank higher on search engines.</p>
+        </div>
+        <div class="service-card">
+            <span class="service-icon">🛠️</span>
+            <h3>Easy CMS</h3>
+            <p>Custom dashboards allowing you to edit text and images without touching code.</p>
+        </div>
+        <div class="service-card">
+            <span class="service-icon">🤝</span>
+            <h3>Ongoing Support</h3>
+            <p>I don't disappear after launch. I provide maintenance to keep your site secure.</p>
+        </div>
+    </div>
+</section>
+
+<section id="work">
+    <div class="section-header">
+        <h2 class="section-title">Projects</h2>
+        <p class="section-sub">I have completed.</p>
+    </div>
+    <div class="projects-grid">
+        <a href="https://dharashuddhjal.onrender.com" target="_blank" class="project-card">
+            <div class="project-img">
+                <img src="image.jpeg" alt="Business websie for dharashuddhjal water service in India">
+            </div>
+            <div class="project-info">
+                <h3>Dhara Shuddh Jal</h3>
+                <p>Clean business website focused on trust and clarity.</p>
+                <div class="project-case">
+                <p><strong>Problem:</strong> Lacked a credible online presence for trust-driven water service.</p>
+                <p><strong>Solution:</strong> Built a clean, fast website with clear hierarchy and trust-focused design.</p>
+                <p><strong>Result:</strong> Business now has a professional online presence that clearly explains services and builds credibility.</p>
+              </div>
+                <div class="tags"><span>Design</span><span>Development</span></div>
+            </div>
+        </a>
+
+        <a href="https://shiv-enterprises-9ees.onrender.com" target="_blank" class="project-card">
+            <div class="project-img logo-frame">
+                <img src="https://i.ibb.co/nMRjSxkd/Whats-App-Image-2026-02-11-at-7-22-29-PM.jpg/300x300.png?text=Shiv+Enterprises" alt="Business websie for Shiv Enterprises in India">
+            </div>
+            <div class="project-info">
+                <h3>Shiv Enterprises</h3>
+                <p>Corporate-style website designed for lead generation.</p>
+                <div class="project-case">
+                <p><strong>Problem:</strong> No strong digital presence to establish professionalism and trust</p>
+                <p><strong>Solution:</strong> Designed a structured,corporate-style website focused in clarity and performance.</p>
+                <p><strong>Result:</strong> A polished online presence that improves brand credibility and client confidence.</p>
+              </div>
+                <div class="tags"><span>GSAP</span><span>Frontend</span></div>
+            </div>
+        </a>
+    </div> 
+</section>
+
+
+
+<section id="reviews">
+    <div class="section-header">
+        <h2 class="section-title">Client Ratings</h2>
+        <p class="section-sub">What my clients say about the work.</p>
+    </div>
+    <div class="reviews-grid">
+        <div class="review-card">
+            <div class="stars">★★★★★</div>
+            <p>"Shubham completely transformed our online presence. The animations are subtle but make us look 10x more professional."</p>
+            <div class="review-author">
+                <div class="author-info">
+                    <h4>Dev Chaudhary</h4>
+                    <span>CEO, Dhara Shuddh Jal</span>
+                </div>
+            </div>
+        </div>
+        <div class="review-card">
+            <div class="stars">★★★★★</div>
+            <p>"Fast, reliable, and very clean code. He understood exactly what we needed for our lead generation forms."</p>
+            <div class="review-author">
+                <div class="author-info">
+                    <h4>Dhiren Nayani</h4>
+                    <span>Founder, Shiv Enterprises</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="about">
+   
+    <div class="about-container">
+        <div class="about-img-wrapper">
+            <img src="shubham.jpeg" alt="Shubham Nayani frontend developer from Gujarat India" class="about-photo">
+            <div class="img-overlay"></div>
+        </div>
+
+        <div class="about-content">
+            <div class="badge">About Me</div>
+            <h2 class="about-title">Engineering logic.<br><span>Photographer's eye.</span></h2>
+            
+            <p class="about-desc">
+                I am currently pursuing my <strong>Diploma in Computer Engineering</strong> while working as a freelance frontend developer. 
+                <br><br>
+                Based in <strong>Kotda Jadodar</strong>, I don't just write code; I craft experiences. My background in <strong>Photography</strong> gives me a unique advantage—I understand composition, lighting, and visual aesthetics better than the average coder.
+            </p>
+
+            <div class="about-details">
+                <div class="detail-item">
+                    <span>Location</span>
+                    <h4>Kotda Jadodar, Gujarat</h4>
+                </div>
+                <div class="detail-item">
+                    <span>Education</span>
+                    <h4>Diploma in Comp. Eng.</h4>
+                </div>
+                <div class="detail-item">
+                    <span>Passion</span>
+                    <h4>Coding & Photography</h4>
+                </div>
+            </div>
+
+            <div class="btn-group" style="margin-top: 35px;">
+                <a href="#contact" class="btn btn-primary">Hire Me</a> 
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="process">
+    <div class="process-grid">
+        <div class="process-step">
+            <span class="step-number">01</span>
+            <h3>Discovery & Strategy</h3>
+        </div>
+        <div class="process-step">
+            <span class="step-number">02</span>
+            <h3>Wireframing & UX</h3>
+        </div>
+        <div class="process-step">
+            <span class="step-number">03</span>
+            <h3>Development</h3>
+        </div>
+        <div class="process-step">
+            <span class="step-number">04</span>
+            <h3>Testing & Launch</h3>
+        </div>
+    </div>
+</section>
+
+<section id="journey">
+    <div class="section-header">
+        <h2 class="section-title">My Journey</h2>
+        <p class="section-sub">Progression through learning, building, and shipping.</p>
+    </div>
+    
+    <div class="journey-grid">
+        
+    <div class="journey-card">
+      <div class="journey-top">
+        <span class="journey-date">2026 — Present</span>
+        <span class="journey-arrow">↗</span>
+      </div>
+
+      <h3>Diploma Student — Computer Engineering</h3>
+      <h4>Government Polytechnic Bhuj</h4>
+
+      <p>
+        Pursuing a diploma in Computer Engineering while actively applying development
+        skills through projects and freelancing. Strengthening technical fundamentals
+        and professional communication.
+      </p>
+
+      <div class="journey-tags">
+        <span>C Programming</span>
+        <span>Computer Fundamentals</span>
+        <span>Teamwork</span>
+        <span>Communication</span>
+      </div>
+    </div>
+
+    <div class="journey-card">
+      <div class="journey-top">
+        <span class="journey-date">Sep 2025</span>
+        <span class="journey-arrow">↗</span>
+      </div>
+
+      <h3>Frontend Web Developer (Beginner)</h3>
+      <h4>Self-Learning</h4>
+
+      <p>
+        Started web development with HTML, CSS, and JavaScript.
+        Built UI layouts and small interactive projects,
+        forming a strong frontend foundation.
+      </p>
+
+      <div class="journey-tags">
+        <span>HTML</span>
+        <span>CSS</span>
+        <span>JavaScript</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<a href="#contact" id="sticky-cta">Start Project</a>
+
+<section id="faq">
+    <div class="section-header">
+        <h2 class="section-title">Common Questions</h2>
+    </div>
+
+    <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+            How much does a website cost in India?
+            <span class="plus">+</span>
+        </button>
+        <div class="faq-answer">
+            It depends on the scope. A simple landing page starts at ₹1,000, while a full business site ranges from ₹5,000 to ₹40,000 depending on animations and features.
+        </div>
+    </div>
+
+    <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+            How long does it take to build a business website?
+            <span class="plus">+</span>
+        </button>
+        <div class="faq-answer">
+            Typically 1–2 weeks for a standard 5-page business website. Speed without sacrificing quality.
+        </div>
+    </div>
+
+    <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+            Do you provide hosting?
+            <span class="plus">+</span>
+        </button>
+        <div class="faq-answer">
+            I help you set it up on your own account or manage it for a small monthly fee.
+        </div>
+    </div>
+</section>
+
+  <section id="social">
+    <div class="social-text">
+      <h2>Social Media</h2>
+      <p>Let's connect</p>
+    </div>
+
+    <div id="cards">
+      <div class="card">
+        <div class="card_content">
+          <img src="instagram.jpeg" alt="shubham nayani instagram profile">
+          <h2>Instagram</h2>
+          <p>Followers : 200+</p>
+          <a href="https://www.instagram.com/shubhm_nayani">Follow</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card_content">
+          <img src="github.png" alt="shubham nayani github profile">
+          <h2>GitHub</h2>
+          <p>Followers : 15+</p>
+          <a href="https://www.github.com/shubhamnayani01"> Follow</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card_content">
+          <img src="snapchat.jpeg" alt="shubham nayani snapchat profile">
+          <h2>snapchat</h2>
+          <p>Connections : 75+</p>
+          <a href="https://www.snapchat.com/add/shubhamnayani01?share_id=np94MNDhwEo&locale=en-IN">Connect</a>
+        </div>
+      </div>
+    </div>
+
+    
+  </section>
+
+<section id="contact">
+    <div class="cta-section">
+        <h2>Ready to upgrade?</h2>
+        <p style="color: #999; margin-bottom: 30px;">Let's build a website that actually works for your business.</p>
+        <div class="btn-group" style="justify-content:center; margin-top:0;">
+            <a href="https://wa.me/919427209737" class="btn btn-primary">WhatsApp Me</a>
+            <a href="mailto:shubhamnayani0110@gmail.com" class="btn btn-secondary">Copy Email</a>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <div>© 2026 Shubham Nayani</div>
+    <div>Web Developer based in India</div>
+</footer>
+
+<script>
+  const progressBar = document.getElementById("scroll-progress");
+const stickyCTA = document.getElementById("sticky-cta");
+
+window.addEventListener("scroll", () => {
+  const scrollTop = window.scrollY;
+  const docHeight =
+    document.documentElement.scrollHeight - window.innerHeight;
+
+  const progress = (scrollTop / docHeight) * 100;
+  progressBar.style.width = `${progress}%`;
+
+  if (progress > 40) {
+    stickyCTA.classList.add("show");
+  } else {
+    stickyCTA.classList.remove("show");
+  }
+});
+    gsap.registerPlugin(ScrollTrigger);
+
+    // Hero Animation
+    gsap.set(".nav-links a", { opacity: 1 });
+
+gsap.from(".nav-logo", {
+  y: -20,
+  opacity: 0,
+  duration: 0.6
+});
+
+gsap.from(".nav-links a", {
+  y: -10,
+  opacity: 0,
+  duration: 0.4,
+  stagger: 0.08,
+  clearProps: "opacity,transform"
+});
+
+gsap.from(".journey-grid", {
+  scrollTrigger: {
+    trigger: "#journey",
+    start: "top 80%",
+  },
+  opacity: 0,
+  duration: 0.6,
+  clearProps: "opacity"
+});
+
+    // About Section Specific Animation
+    gsap.from(".about-img-wrapper", {
+        scrollTrigger: {
+            trigger: "#about",
+            start: "top 80%",
+        },
+        x: -50,
+        opacity: 0,
+        duration: 1
+    });
+
+    gsap.from(".about-content", {
+        scrollTrigger: {
+            trigger: "#about",
+            start: "top 80%",
+        },
+        x: 50,
+        opacity: 0,
+        duration: 1,
+        delay: 0.2
+    });
+
+    // Sections Reveal on Scroll (Excluding About to prevent conflict)
+   gsap.utils.toArray(".section-header").forEach(header => {
+  gsap.from(header, {
+    scrollTrigger: {
+      trigger: header,
+      start: "top 85%",
+    },
+    y: 40,
+    opacity: 0,
+    duration: 0.6,
+    clearProps: "all"
+  });
+});
+
+// card logic
+   const cards = document.querySelectorAll(".card");
+    const container = document.getElementById("cards");
+
+    container.addEventListener("mousemove", (e) => {
+      cards.forEach(card => {
+        const rect = card.getBoundingClientRect();
+        card.style.setProperty("--mouse-x", e.clientX - rect.left + "px");
+        card.style.setProperty("--mouse-y", e.clientY - rect.top + "px");
+      });
+    });
+
+    container.addEventListener("mouseleave", () => {
+      cards.forEach(card => {
+        card.style.setProperty("--mouse-x", "50%");
+        card.style.setProperty("--mouse-y", "50%");
+      });
+    });
+
+// FAQ Logic — FIXED
+const items = document.querySelectorAll('.faq-item');
+
+items.forEach(item => {
+  const btn = item.querySelector('.faq-question');
+  const answer = item.querySelector('.faq-answer');
+
+  btn.addEventListener('click', () => {
+    const isOpen = item.classList.contains('active');
+
+    items.forEach(i => {
+      i.classList.remove('active');
+      i.querySelector('.faq-answer').style.height = '0px';
+      i.querySelector('.faq-question')
+        .setAttribute('aria-expanded', 'false');
+    });
+
+    if (!isOpen) {
+      item.classList.add('active');
+      answer.style.height = answer.scrollHeight + 'px';
+      btn.setAttribute('aria-expanded', 'true');
+    }
+  });
+});
+
+</script>
+
+</body>
+</html>
