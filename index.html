@@ -1,1007 +1,919 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>Frontend Developer in Gujarat | Animated Websites with GSAP – Shubham Nayani</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="google-site-verification" content="Rr4RzjfIdYc1a8tQm2afFTSamDzLy0cN1NIucmeUu20" />
-<meta name="description" content="Frontend developer in India specializing in high-performance, animated websites using HTML, CSS, JavaScript & GSAP. Available for freelance projects.">
-<link rel="icon" href="favicon.ico">
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <!-- Primary Meta -->
+  <title>Shubham Nayani — Website Developer for Local Businesses in Gujarat</title>
+  <meta name="description" content="Professional websites for local businesses in Bhuj, Gandhidham & Kutch. Fast delivery, mobile-first, WhatsApp-ready. Starting at ₹3,999."/>
+  <meta name="keywords" content="web developer Gujarat, website design Bhuj, Gandhidham website, Kutch web developer, local business website, Shubham Nayani"/>
+  <meta name="author" content="Shubham Nayani"/>
+  <meta name="robots" content="index, follow"/>
+
+  <!-- OpenGraph -->
+  <meta property="og:type" content="website"/>
+  <meta property="og:url" content="https://shubhamnayani.in/"/>
+  <meta property="og:title" content="Shubham Nayani — Website Developer for Local Businesses in Gujarat"/>
+  <meta property="og:description" content="Get a professional website for your local business in Bhuj, Gandhidham, or Kutch. Fast delivery, mobile-first, WhatsApp-ready. Starting at ₹3,999."/>
+  <meta property="og:image" content="https://shubhamnayani.in/og-image.png"/>
+  <meta property="og:locale" content="en_IN"/>
+  <meta property="og:site_name" content="Shubham Nayani — Web Developer"/>
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:title" content="Shubham Nayani — Website Developer for Local Businesses"/>
+  <meta name="twitter:description" content="Professional websites for shops, clinics, restaurants & local businesses in Kutch, Gujarat. Starting at ₹3,999."/>
+  <meta name="twitter:image" content="https://shubhamnayani.in/og-image.png"/>
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://shubhamnayani.in/"/>
+
+  <!-- Favicon (inline SVG data URI) -->
+ <link rel="icon" href="favicon.ico">
 <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="favicon-16.png">
 <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
 <meta name="theme-color" content="#050505">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Person",
-  "name": "Shubham Nayani",
-  "jobTitle": "Frontend Developer",
-  "url": "https://shubhamnayani01.com",
-  "sameAs": [
-    "https://www.instagram.com/shubhm_nayani",
-    "https://www.github.com/shubhamnayani01"
-  ],
-  "address": {
-    "@type": "PostalAddress",
-    "addressRegion": "Gujarat",
-    "addressCountry": "IN"
-  },
-  "knowsAbout": [
-    "HTML",
-    "CSS",
-    "JavaScript",
-    "GSAP",
-    "Frontend Development",
-    "Web Animation"
-  ]
-}
-</script>
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Clash+Display:wght@400;500;600;700&family=Satoshi:wght@300;400;500;700;900&display=swap" rel="stylesheet"/>
+  <!-- Fallback font stack in CSS if Clash/Satoshi unavailable via CDN -->
 
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "How much does a website cost in India?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "The cost depends on the scope. A simple landing page starts at ₹1,000, while a full business website typically ranges from ₹5,000 to ₹40,000 depending on design, animations, and features."
-      }
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css"/>
+
+  <!-- Schema Markup -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Shubham Nayani",
+    "jobTitle": "Web Developer",
+    "description": "Professional web developer specializing in fast, mobile-first websites for local businesses in Kutch, Gujarat.",
+    "url": "https://shubhamnayani.in",
+    "telephone": "+919427209737",
+    "email": "shubhamnayani@gmail.com",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Bhuj",
+      "addressRegion": "Gujarat",
+      "addressCountry": "IN"
     },
-    {
-      "@type": "Question",
-      "name": "How long does it take to build a business website?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Most standard business websites take 1 to 2 weeks to complete, depending on content readiness and required features."
+    "sameAs": [
+      "https://www.instagram.com/shubhm_nayani",
+      "https://wa.me/919427209737"
+    ],
+    "knowsAbout": ["Web Development", "HTML", "CSS", "JavaScript", "SEO", "Mobile-First Design"],
+    "offers": {
+      "@type": "Offer",
+      "name": "Website Development Services",
+      "priceRange": "₹3,999 - ₹14,999",
+      "priceCurrency": "INR",
+      "areaServed": {
+        "@type": "Place",
+        "name": "Kutch, Gujarat, India"
       }
+    }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Shubham Nayani Web Development",
+    "description": "Professional website development for local businesses in Bhuj, Gandhidham, Nakhatrana and all of Kutch.",
+    "url": "https://shubhamnayani.in",
+    "telephone": "+919427209737",
+    "priceRange": "₹₹",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Bhuj",
+      "addressRegion": "Gujarat",
+      "postalCode": "370001",
+      "addressCountry": "IN"
     },
-    {
-      "@type": "Question",
-      "name": "Do you provide website hosting?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes. I can help set up hosting on your own account or manage hosting and maintenance for a small monthly fee."
-      }
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 23.2419,
+      "longitude": 69.6669
+    },
+    "openingHoursSpecification": {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
+      "opens": "09:00",
+      "closes": "21:00"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "5",
+      "reviewCount": "25"
     }
-  ]
-}
-</script>
-
-<style>
-:root {
-    --bg: #050505;
-    --card-bg: #111111;
-    --text-main: #ffffff;
-    --text-muted: #888888;
-    --accent: #fff;
-    --border: #222;
-    --gold: #FFD700;
-}
-
-* {margin:0; padding:0; box-sizing:border-box; font-family: 'Inter', sans-serif;}
-
-html {scroll-behavior: smooth;}
-body {background: var(--bg); color: var(--text-main); overflow-x: hidden; position: relative;}
-
-/* NOISE OVERLAY */
-.noise {
-    position: fixed; 
-    top: 0;
-    left: 0;
-    width: 100%; 
-    height: 100%;
-    pointer-events: none; 
-    z-index: -1; 
-    opacity: 0.05;
-    background: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='1'/%3E%3C/svg%3E");
-}
-
-a {text-decoration: none; 
-    color: inherit; 
-    transition: 0.3s;
-}
-
-
-/* NAVIGATION */
-nav {
-  position: fixed;
-  top: 20px;
-  left: 50%;
-  transform: translateX(-50%);
-  padding: 12px 28px;
-  background: rgba(20, 20, 20, 0.7);
-  backdrop-filter: blur(12px);
-  border: 1px solid rgba(255,255,255,0.08);
-  border-radius: 100px;
-
-  display: flex;
-  align-items: center;
-  gap: 40px;
-
-  width: fit-content;
-  max-width: none;
-  z-index: 10;
-}
-
-ul {list-style: none;
-margin: 0;
-padding: 0;
-}
-
-.nav-logo {font-weight: 700; 
-    font-size: 0.8rem;
-    white-space: nowrap; 
-    letter-spacing: -0.02em;
-}
-
-.nav-links{
-    display: flex;
-    gap: 20px;
-}
-
-.nav-links a {
-    display: inline-block;
-    font-size: 0.85rem;
-    color: #bbb;
-    opacity: 1;
-    margin-left: 0;
-    font-weight: 500;
-    visibility: visible;
-}
-.nav-links a:hover,
-.nav-links a:focus { color: #fff; }
-
-.nav-links a::after {
-  content: "";
-  position: absolute;
-  left: 50%;
-  bottom: -6px;
-  width: 0;
-  height: 2px;
-  background: #fff;
-  transform: translateX(-50%);
-  transition: width 0.25s ease;
-}
-
-.nav-links a.active::after {
-  width: 60%;
-}   
-
-/* HERO */
-.hero {
-    min-height: 100vh; 
-    padding: 0 10%;
-    display: flex; 
-    flex-direction: column; 
-    justify-content: center; 
-    align-items: center;
-    text-align: center;
-    background: radial-gradient(circle at 50% 50%, #1a1a1a 0%, #050505 50%);
-}
-.badge {
-    padding: 6px 14px; 
-    border: 1px solid #333; 
-    border-radius: 30px;
-    font-size: 0.75rem; 
-    color: #ccc; 
-    margin-bottom: 25px;
-    background: rgba(255,255,255,0.03);
-}
-.hero h1 {
-    font-size: clamp(2.5rem, 5vw, 4.5rem);
-    max-width: 900px; line-height: 1.1; letter-spacing: -0.03em;
-    background: linear-gradient(to bottom right, #fff, #888);
-    -webkit-background-clip: text; -webkit-text-fill-color: transparent;
-}
-.hero p {margin-top: 25px; color: var(--text-muted); max-width: 500px; line-height: 1.6;}
-
-.btn-group {margin-top: 40px; display: flex; gap: 15px;}
-.btn {
-    padding: 14px 32px; border-radius: 100px; font-weight: 500; font-size: 0.95rem;
-    transition: transform 0.2s, box-shadow 0.2s;
-}
-.btn-primary {background: #fff; color: #000;}
-.btn-primary:hover {transform: translateY(-2px); box-shadow: 0 10px 20px rgba(255,255,255,0.15);}
-.btn-secondary {border: 1px solid #333; color: #fff; background: transparent;}
-.btn-secondary:hover {border-color: #fff;}
-
-/* SECTIONS GLOBAL */
-section {position: relative; z-index: 1; padding: 140px 10%; max-width: 1400px; margin: 0 auto;}
-.section-header {margin-bottom: 60px;}
-.section-title {font-size: 2rem; margin-bottom: 15px;}
-.section-sub {color: var(--text-muted); max-width: 400px;}
-
-/* SERVICES & REVIEWS GRID */
-.services-grid, .reviews-grid {
-    display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px;
-}
-.service-card, .review-card {
-    background: var(--card-bg); padding: 40px; border-radius: 20px;
-    border: 1px solid var(--border); transition: 0.3s;
-    display: flex; flex-direction: column; justify-content: center;
-}
-.service-card:hover, .review-card:hover {transform: translateY(-10px); border-color: #444; background: #161616; box-shadow: 0 20px 40px rgba(0,0,0,0.4);}
-.service-icon {font-size: 1.5rem; margin-bottom: 20px; display: block;}
-.service-card h3 {margin-bottom: 10px; font-weight: 500;}
-.service-card p, .review-card p {color: var(--text-muted); font-size: 0.9rem; line-height: 1.5;}
-
-/* REVIEWS SPECIFIC */
-.stars {color: var(--gold); margin-bottom: 15px; font-size: 1.1rem;}
-.review-author {margin-top: 20px; display: flex; align-items: center; gap: 12px;}
-.author-avatar {width: 40px; height: 40px; border-radius: 50%; background: #333;}
-.author-info h4 {font-size: 0.9rem; color: #fff;}
-.author-info span {font-size: 0.8rem; color: #666;}
-
-/* PROJECTS */
-.projects-grid {
-    display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 40px;
-}
-.project-card { cursor: pointer; }
-.project-img {
-    height: 280px; background: #1a1a1a; border-radius: 20px;
-    margin-bottom: 20px; overflow: hidden; position: relative;
-    border: 1px solid var(--border);
-}
-
-.project-case p {
-  font-size: 0.85rem;
-  color: #f2f2f2;
-  line-height: 1.5;
-  margin-bottom: 6px;
-}
-
-.project-case strong {
-  color: #fff;
-  font-weight: 500;
-}
-
-.project-img img {
-    width: 100%; height: 100%; object-fit: cover;
-    transition: transform 0.5s ease; opacity: 0.8;
-}
-.project-card:hover .project-img img {transform: scale(1.05); opacity: 1;}
-.project-info h3 {font-size: 1.4rem; margin-bottom: 8px;}
-.project-info p {color: var(--text-muted); font-size: 0.9rem; margin-bottom: 15px;}
-.tags span {
-    font-size: 0.75rem; padding: 4px 10px; border: 1px solid #333;
-    border-radius: 20px; color: #aaa; margin-right: 6px;
-}
-
-/* ABOUT SECTION STYLES */
-/* LOGO FRAME — CLEAN & INTENTIONAL */
-.logo-frame {
-  background: #f2f2f2;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.logo-frame img {
-  max-width: 140px;
-  max-height: 140px;
-  object-fit: contain;
-  transition: transform 0.5s ease; opacity: 0.8;
-}
-
-.about-container {
-    display: grid;
-    grid-template-columns: 0.8fr 1.2fr;
-    gap: 80px;
-    align-items: center;
-}
-.about-img-wrapper {
-    position: relative;
-    border-radius: 20px;
-    overflow: hidden;
-    border: 1px solid #333;
-    height: 500px;
-}
-.about-photo {
-    width: 100%; height: 100%; object-fit: cover;
-    filter: grayscale(100%);
-    transition: filter 0.5s ease, transform 0.5s ease;
-}
-.about-img-wrapper:hover .about-photo {
-    filter: grayscale(0%);
-    transform: scale(1.05);
-}
-.about-title { font-size: 3rem; line-height: 1.1; margin-bottom: 30px; }
-.about-title span { color: #666; }
-.about-desc {
-    color: #aaa; line-height: 1.7; font-size: 1rem; max-width: 90%;
-}
-.about-desc strong { color: #fff; font-weight: 500; }
-.about-details {
-    display: grid; grid-template-columns: 1fr 1fr;
-    gap: 30px; margin-top: 40px; padding-top: 30px;
-    border-top: 1px solid #222;
-}
-.detail-item span {
-    display: block; font-size: 0.75rem; text-transform: uppercase;
-    letter-spacing: 1px; color: #666; margin-bottom: 8px;
-}
-.detail-item h4 { font-size: 1rem; color: #fff; font-weight: 500; }
-
-/* PROCESS SECTION STYLES */
-.process { border-top: 1px solid #222; padding: 80px 10%; }
-.process-grid {
-    max-width: 1100px; margin: 0 auto;
-    display: grid; grid-template-columns: repeat(4, 1fr); gap: 60px;
-}
-.process-step { transition: transform 0.25s ease, opacity 0.25s ease; }
-.step-number {
-    display: block; font-size: 0.8rem; color: #666;
-    margin-bottom: 10px; letter-spacing: 1px;
-}
-.process-step h3 { font-size: 1.1rem; font-weight: 500; color: #fff; }
-.process-step:hover { transform: translateY(-4px); opacity: 1; }
-
-/* JOURNEY */
-.journey-grid {
-  max-width: 1100px;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 30px;
-}
-
-.journey-card {
-  background: linear-gradient(
-    180deg,
-    rgba(255,255,255,0.05),
-    rgba(255,255,255,0.02)
-  );
-  border: 1px solid rgba(255,255,255,0.08);
-  border-radius: 20px;
-  padding: 30px;
-
-  /* BASE DEPTH */
-  box-shadow:
-    0 10px 30px rgba(0, 0, 0, 0.25),
-    inset 0 1px 0 rgba(255, 255, 255, 0.04);
-
-  transition:
-    transform 0.3s ease,
-    box-shadow 0.3s ease,
-    border-color 0.3s ease;
-}
-
-.journey-card:hover {
-  transform: translateY(-8px);
-  filter: drop-shadow(0 0 12px rgba(0, 198, 255, 0.15));
-
-  /* HOVER DEPTH */
-  box-shadow:
-    0 25px 60px rgba(0, 0, 0, 0.45),
-    0 0 0 1px rgba(255, 255, 255, 0.12),
-    inset 0 1px 0 rgba(255, 255, 255, 0.06);
-
-  border-color: rgba(255,255,255,0.25);
-}
-
-.journey-top {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 20px;
-}
-
-.journey-date {
-  font-size: 0.75rem;
-  padding: 6px 12px;
-  border-radius: 20px;
-  background: rgba(255,255,255,0.08);
-  color: #ccc;
-  letter-spacing: 0.5px;
-}
-
-.journey-arrow {
-  font-size: 1.2rem;
-  color: #00c6ff;
-}
-
-.journey-card h3 {
-  font-size: 1.3rem;
-  margin-bottom: 6px;
-}
-
-.journey-card h4 {
-  font-size: 0.9rem;
-  font-weight: 400;
-  color: #888;
-  margin-bottom: 16px;
-}
-
-.journey-card p {
-  font-size: 0.95rem;
-  line-height: 1.6;
-  color: #aaa;
-  margin-bottom: 20px;
-}
-
-.journey-tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-}
-
-.journey-tags span {
-  font-size: 0.7rem;
-  padding: 6px 12px;
-  border-radius: 20px;
-  background: rgba(255,255,255,0.06);
-  color: #ddd;
-}
-
-/* FAQ STYLES */
-.faq-item { border-bottom: 1px solid #222; padding: 18px 0; }
-.faq-question {
-    width: 100%; background: none; border: none;
-    color: #fff; font-size: 1rem; font-weight: 500;
-    display: flex; justify-content: space-between; align-items: center;
-    cursor: pointer; padding: 14px 0; text-align: left;
-}
-.plus { font-size: 1.4rem; transition: transform 0.3s ease; }
-.faq-answer {
-    height: 0; overflow: hidden; color: #aaa;
-    font-size: 0.95rem; line-height: 1.6; opacity: 0;
-    transition: height 0.4s ease, opacity 0.25s ease;
-}
-.faq-item.active .faq-answer {opacity: 1; padding-top: 10px; }
-.faq-item.active .plus { transform: rotate(45deg); }
-
-/* CONTACT */
-.cta-section {
-    text-align: center; background: #111; padding: 80px;
-    border-radius: 30px; border: 1px solid #222;
-}
-.cta-section h2 {font-size: 2.5rem; margin-bottom: 20px;}
-.contact-links {margin-top: 30px; display: flex; justify-content: center; gap: 20px;}
-
-
-    /* HERO SECTION */
-    #social {
-      min-height: 100vh;
-      display: grid;
-      place-items: center;
-      position: relative;
-      padding: 80px 0;
-      animation: heroFade 0.8s ease-out both;
-    }
-
-    @keyframes socialFade {
-      from {
-        opacity: 0;
-        transform: translateY(20px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    .social-text {
-      text-align: center;
-      margin-bottom: 40px;
-    }
-
-    .social-text h1 {
-      font-size: clamp(2.4rem, 4vw, 3.6rem);
-      font-weight: 700;
-    }
-
-    .social-text p {
-      margin-top: 10px;
-      opacity: 0.7;
-      letter-spacing: 0.5px;
-    }
-
-    /* CARDS */
-    #cards {
-      width: 70%;
-      display: flex;
-      gap: 30px;
-      padding: 20px;
-      flex-wrap: wrap;
-    }
-
-    .card {
-      min-width: 200px;
-      height: 350px;
-      flex: 1 1 250px;
-      position: relative;
-      border-radius: 14px;
-      background: rgba(255,255,255,0.12);
-      overflow: hidden;
-
-      --mouse-x: 50%;
-      --mouse-y: 50%;
-
-      transition:
-        transform 0.15s ease,
-        box-shadow 0.15s ease;
-    }
-
-    .card:hover {
-      transform: translateY(-10px) scale(1.02);
-      box-shadow:
-        0 30px 60px rgba(0,0,0,0.6),
-        0 0 40px hsl(var(--color) / 0.4);
-    }
-
-    /* STRONG GLOW */
-    #cards:hover > .card {
-      background: radial-gradient(
-        600px circle at var(--mouse-x) var(--mouse-y),
-        hsl(var(--color) / 1),
-        rgba(255,255,255,0.1) 35%
-      );
-    }
-
-    .card::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: radial-gradient(
-        750px circle at var(--mouse-x) var(--mouse-y),
-        hsl(var(--color) / 0.55),
-        transparent 45%
-      );
-      opacity: 0;
-      transition: opacity 0.08s linear;
-    }
-
-    #cards:hover > .card::before {
-      opacity: 1;
-    }
-
-    .card_content {
-      position: relative;
-      z-index: 5;
-      inset: 1px;
-      height: calc(100% - 2px);
-      border-radius: inherit;
-      background: #131315;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      gap: 18px;
-      text-align: center;
-    }
-
-    .card_content i {
-      font-size: 5rem;
-      color: rgba(255,255,255,0.55);
-    }
-
-    .card_content p {
-      opacity: 0.6;
-    }
-
-    .card_content a {
-      width: 90%;
-      padding: 0.8rem 0;
-      border-radius: 8px;
-      background: rgba(255,255,255,0.06);
-      border: 1px solid rgba(255,255,255,0.15);
-      color: white;
-      text-decoration: none;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 8px;
-      transition: 0.12s ease;
-    }
-
-    .card_content a:hover {
-      background: rgba(255,255,255,0.14);
-      border-color: rgba(255,255,255,0.35);
-    }
-
-    /* image sec.*/
-    .card_content img {
-  width: 80px;
-  height: 80px;
-  object-fit: contain;
-  margin-bottom: 10px;
-}
-
-.card_content img {
-  filter: drop-shadow(0 6px 12px rgba(0,0,0,0.4));
-}
-
-    /* COLORS */
-    .card:nth-child(1) { --color: 348 80% 60%; }
-    .card:nth-child(2) { --color: 0 0% 100%; }
-    .card:nth-child(3) { --color: 220 100% 40%; }
-
-    /* SCROLL HINT */
-    .scroll-down {
-      position: absolute;
-      bottom: 30px;
-      font-size: 0.9rem;
-      opacity: 0.6;
-      animation: bounce 1.6s infinite;
-    }
-
-    @keyframes bounce {
-      0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(6px); }
-    }
-
-    @media (max-width: 900px) {
-      #cards {
-        width: 90%;
-      }
-    }
-
-#scroll-progress {
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 3px;
-  width: 0%;
-  background: linear-gradient(90deg, #ffffff, #888888);
-  z-index: 9999;
-  transition: width 0.1s linear;
-}
-
-
-#sticky-cta {
-  position: fixed;
-  bottom: 24px;
-  right: 24px;
-  padding: 14px 26px;
-  background: #ffffff;
-  color: #000000;
-  font-weight: 500;
-  font-size: 0.9rem;
-  border-radius: 100px;
-  box-shadow: 0 10px 30px rgba(255,255,255,0.2);
-  opacity: 0;
-  pointer-events: none;
-  transform: translateY(20px);
-  transition: all 0.3s ease;
-  z-index: 999;
-}
-
-#sticky-cta.show {
-  opacity: 1;
-  pointer-events: auto;
-  transform: translateY(0);
-}
-
-/* FOOTER */
-footer {
-    padding: 50px 10%; border-top: 1px solid #222;
-    display: flex; justify-content: space-between; color: #555; font-size: 0.85rem;
-}
-
-/* RESPONSIVE */
-@media(max-width: 900px) {
-    .about-container { grid-template-columns: 1fr; gap: 50px; }
-    .about-img-wrapper { height: 400px; order: 2; }
-    .about-title { font-size: 2.2rem; }
-    .process-grid { grid-template-columns: 1fr 1fr; gap: 40px; }
-}
-@media (max-width: 768px) {
-    nav {padding: 12px 20px;}
-    .hero {padding: 120px 5% 60px;}
-    .hero h1 {font-size: 2.5rem;}
-    .btn-group {flex-direction: column; width: 100%;}
-    .btn {width: 100%; text-align: center;}
-    .cta-section {padding: 40px 20px;}
-    footer {flex-direction: column; gap: 20px; text-align: center;}
-    .faq-question { font-size: 1rem; padding: 18px 0; }
-}
-@media (max-width: 500px) {
-    .process-grid { grid-template-columns: 1fr; gap: 30px; }
-}
-</style>
+  }
+  </script>
 </head>
-
 <body>
-  
-<div id="scroll-progress"></div>
-<div class="noise"></div>
 
-<nav>
-    <div class="nav-logo">SHUBHAM NAYANI</div>
-    <div class="nav-links">
-        <a href="#work">Work</a>
-        <a href="#services">Services</a>
-        <a href="#reviews">Reviews</a>
-        <a href="#contact">Contact</a>
+<!-- ════════════════════════════════
+     NAVBAR
+════════════════════════════════ -->
+<nav id="navbar">
+  <div class="nav-inner">
+    <a href="#home" class="nav-logo" aria-label="Shubham Nayani Home">
+      <span class="logo-mark">SN</span>
+      <span class="logo-text">Shubham<span class="logo-accent">.</span></span>
+    </a>
+
+    <ul class="nav-links" role="list">
+      <li><a href="#home" class="nav-link">Home</a></li>
+      <li><a href="#services" class="nav-link">Services</a></li>
+      <li><a href="#portfolio" class="nav-link">Portfolio</a></li>
+      <li><a href="#pricing" class="nav-link">Pricing</a></li>
+      <li><a href="#contact" class="nav-link">Contact</a></li>
+    </ul>
+
+    <div class="nav-actions">
+      <a href="https://wa.me/919427209737?text=Hi%20Shubham!%20I%27m%20interested%20in%20a%20website." class="btn-nav-cta" target="_blank" rel="noopener">
+        <span class="wa-dot"></span> WhatsApp Me
+      </a>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
     </div>
+  </div>
 </nav>
 
-<div class="hero">
-    <div class="badge">Available for freelance work</div>
-    <h1>Frontend Developer in Gujarat Building Animated, High-Performance Websites.</h1>
-    <p>I’m a freelance frontend developer in Gujarat, India, specializing in fast, SEO-friendly
-business websites with smooth GSAP animations that convert visitors into customers.</p>
-    <div class="btn-group">
-        <a href="#contact" class="btn btn-primary">Start a Project</a>
-        <a href="#work" class="btn btn-secondary">View Work</a>
-    </div>
+<!-- Mobile Menu Overlay -->
+<div class="mobile-overlay" id="mobileOverlay" aria-hidden="true">
+  <div class="mobile-menu" id="mobileMenu" role="dialog" aria-label="Navigation menu">
+    <button class="mobile-close" id="mobileClose" aria-label="Close menu">✕</button>
+    <nav>
+      <a href="#home" class="mobile-link">Home</a>
+      <a href="#services" class="mobile-link">Services</a>
+      <a href="#portfolio" class="mobile-link">Portfolio</a>
+      <a href="#pricing" class="mobile-link">Pricing</a>
+      <a href="#about" class="mobile-link">About</a>
+      <a href="#contact" class="mobile-link">Contact</a>
+    </nav>
+    <a href="https://wa.me/919427209737" class="mobile-cta" target="_blank" rel="noopener">💬 WhatsApp Me</a>
+  </div>
 </div>
 
-<section id="services">
-    <div class="section-header">
-        <h2 class="section-title">Frontend Development Services</h2>
-        <p class="section-sub">Focusing on results, not just code.</p>
+<!-- ════════════════════════════════
+     HERO
+════════════════════════════════ -->
+<section class="hero" id="home">
+  <div class="hero-canvas">
+    <div class="hero-grid"></div>
+    <div class="hero-orb orb-1"></div>
+    <div class="hero-orb orb-2"></div>
+    <div class="hero-orb orb-3"></div>
+    <!-- Floating code lines decoration -->
+    <div class="code-float code-1"><span class="c-tag">&lt;</span>website<span class="c-tag">&gt;</span></div>
+    <div class="code-float code-2"><span class="c-key">const</span> <span class="c-var">business</span> = <span class="c-str">"online"</span></div>
+    <div class="code-float code-3"><span class="c-tag">&lt;/</span>success<span class="c-tag">&gt;</span></div>
+  </div>
+  <div class="hero-inner container">
+    <div class="hero-text" data-animate="hero">
+      <div class="hero-badge">
+        <span class="badge-pulse"></span>
+        Available for Projects &nbsp;·&nbsp; Gujarat, India
+      </div>
+      <h1 class="hero-headline">
+        I Build Websites That<br/>
+        <span class="headline-em">Grow Your</span><br/>
+        Local Business
+      </h1>
+      <p class="hero-sub">
+        Professional, mobile-ready websites for shops, clinics, restaurants & local services in Bhuj, Gandhidham, Nakhatrana & all of Kutch — delivered in 2–5 days.
+      </p>
+      <div class="hero-ctas">
+        <a href="#portfolio" class="btn-primary">View My Work <span class="btn-arrow">→</span></a>
+        <a href="#contact" class="btn-outline">Get a Quote</a>
+      </div>
+      <div class="hero-stats">
+        <div class="hero-stat">
+          <strong class="stat-n">25+</strong>
+          <span class="stat-l">Websites Built</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="hero-stat">
+          <strong class="stat-n">2–5</strong>
+          <span class="stat-l">Days Delivery</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="hero-stat">
+          <strong class="stat-n">₹3,999</strong>
+          <span class="stat-l">Starting Price</span>
+        </div>
+      </div>
     </div>
-    <div class="services-grid">
-        
-        <div class="service-card">
-            <span class="service-icon">⚡</span>
-            <h3>Performance First</h3>
-            <p>Sites that load in milliseconds. Google loves them, and so will your customers.</p>
+
+    <div class="hero-visual" data-animate="hero-visual">
+      <div class="device-mockup">
+        <div class="device-frame">
+          <div class="device-bar">
+            <span class="d-dot"></span><span class="d-dot"></span><span class="d-dot"></span>
+            <div class="d-url">yourbusiness.in</div>
+          </div>
+          <div class="device-screen">
+            <div class="mock-nav-bar">
+              <div class="mock-logo-blk"></div>
+              <div class="mock-links">
+                <div class="mock-link"></div>
+                <div class="mock-link"></div>
+                <div class="mock-link"></div>
+              </div>
+            </div>
+            <div class="mock-hero-area">
+              <div class="mock-heading"></div>
+              <div class="mock-subtext"></div>
+              <div class="mock-subtext short"></div>
+              <div class="mock-btns">
+                <div class="mock-btn primary-mock">Book Now</div>
+                <div class="mock-btn ghost-mock">WhatsApp ↗</div>
+              </div>
+            </div>
+            <div class="mock-cards-row">
+              <div class="mock-card"><div class="mc-icon">🕐</div><div class="mc-line"></div><div class="mc-line short"></div></div>
+              <div class="mock-card"><div class="mc-icon">📍</div><div class="mc-line"></div><div class="mc-line short"></div></div>
+              <div class="mock-card"><div class="mc-icon">⭐</div><div class="mc-line"></div><div class="mc-line short"></div></div>
+            </div>
+          </div>
         </div>
-        <div class="service-card">
-            <span class="service-icon">✨</span>
-            <h3>Fluid Animation</h3>
-            <p>Using GSAP to create premium, silky-smooth interactions that build trust.</p>
+        <div class="device-glow"></div>
+      </div>
+      <!-- Floating chips -->
+      <div class="float-chip chip-a">
+        <span class="chip-icon">⚡</span>
+        <div class="chip-text">
+          <strong>2–5 Day Delivery</strong>
+          <small>Fast turnaround</small>
         </div>
-        <div class="service-card">
-            <span class="service-icon">📱</span>
-            <h3>Responsive Design</h3>
-            <p>Flawless experience on every device, from 4K monitors to mobile phones.</p>
+      </div>
+      <div class="float-chip chip-b">
+        <span class="chip-icon">📱</span>
+        <div class="chip-text">
+          <strong>Mobile-First</strong>
+          <small>Every device</small>
         </div>
-        <div class="service-card">
-            <span class="service-icon">🔍</span>
-            <h3>Technical SEO</h3>
-            <p>Semantic HTML and optimization structure to help you rank higher on search engines.</p>
-        </div>
-        <div class="service-card">
-            <span class="service-icon">🛠️</span>
-            <h3>Easy CMS</h3>
-            <p>Custom dashboards allowing you to edit text and images without touching code.</p>
-        </div>
-        <div class="service-card">
-            <span class="service-icon">🤝</span>
-            <h3>Ongoing Support</h3>
-            <p>I don't disappear after launch. I provide maintenance to keep your site secure.</p>
-        </div>
+      </div>
     </div>
+  </div>
+
+  <!-- Scroll hint -->
+  <div class="scroll-hint" aria-hidden="true">
+    <div class="scroll-line"></div>
+    <span>Scroll</span>
+  </div>
 </section>
 
-<section id="work">
-    <div class="section-header">
-        <h2 class="section-title">Projects</h2>
-        <p class="section-sub">I have completed.</p>
-    </div>
-    <div class="projects-grid">
-        <a href="https://dharashuddhjal.onrender.com" target="_blank" class="project-card">
-            <div class="project-img">
-                <img src="image.jpeg" alt="Business websie for dharashuddhjal water service in India">
-            </div>
-            <div class="project-info">
-                <h3>Dhara Shuddh Jal</h3>
-                <p>Clean business website focused on trust and clarity.</p>
-                <div class="project-case">
-                <p><strong>Problem:</strong> Lacked a credible online presence for trust-driven water service.</p>
-                <p><strong>Solution:</strong> Built a clean, fast website with clear hierarchy and trust-focused design.</p>
-                <p><strong>Result:</strong> Business now has a professional online presence that clearly explains services and builds credibility.</p>
-              </div>
-                <div class="tags"><span>Design</span><span>Development</span></div>
-            </div>
-        </a>
+<!-- ════════════════════════════════
+     MARQUEE
+════════════════════════════════ -->
+<div class="marquee-band" aria-hidden="true">
+  <div class="marquee-track">
+    <span class="m-item">🏥 Medical Stores</span>
+    <span class="m-sep">✦</span>
+    <span class="m-item">📱 Telecom Shops</span>
+    <span class="m-sep">✦</span>
+    <span class="m-item">🍽️ Restaurants</span>
+    <span class="m-sep">✦</span>
+    <span class="m-item">💪 Gyms</span>
+    <span class="m-sep">✦</span>
+    <span class="m-item">💇 Beauty Salons</span>
+    <span class="m-sep">✦</span>
+    <span class="m-item">💧 Water Supply</span>
+    <span class="m-sep">✦</span>
+    <span class="m-item">🛒 General Shops</span>
+    <span class="m-sep">✦</span>
+    <span class="m-item">🏠 Real Estate</span>
+    <span class="m-sep">✦</span>
+    <!-- Duplicate for seamless scroll -->
+    <span class="m-item">🏥 Medical Stores</span>
+    <span class="m-sep">✦</span>
+    <span class="m-item">📱 Telecom Shops</span>
+    <span class="m-sep">✦</span>
+    <span class="m-item">🍽️ Restaurants</span>
+    <span class="m-sep">✦</span>
+    <span class="m-item">💪 Gyms</span>
+    <span class="m-sep">✦</span>
+    <span class="m-item">💇 Beauty Salons</span>
+    <span class="m-sep">✦</span>
+    <span class="m-item">💧 Water Supply</span>
+    <span class="m-sep">✦</span>
+    <span class="m-item">🛒 General Shops</span>
+    <span class="m-sep">✦</span>
+    <span class="m-item">🏠 Real Estate</span>
+    <span class="m-sep">✦</span>
+  </div>
+</div>
 
-        <a href="https://shiv-enterprises-9ees.onrender.com" target="_blank" class="project-card">
+<!-- ════════════════════════════════
+     SERVICES
+════════════════════════════════ -->
+<section class="services-section section-dark" id="services">
+  <div class="container">
+    <div class="section-head fade-in">
+      <span class="section-label">What I Build</span>
+      <h2 class="section-title">Services That <em>Drive Results</em></h2>
+      <p class="section-desc">Every service is engineered to bring your customers to your door — online and offline.</p>
+    </div>
+    <div class="services-grid">
+
+      <div class="service-card fade-in">
+        <div class="sc-icon-wrap">🏪</div>
+        <div class="sc-number">01</div>
+        <h3 class="sc-title">Business Website</h3>
+        <p class="sc-desc">Your shop, clinic, or service — fully online with everything customers need: location, hours, products, and direct WhatsApp contact.</p>
+        <ul class="sc-features">
+          <li>Up to 5 pages</li>
+          <li>WhatsApp chat button</li>
+          <li>Google Maps integration</li>
+          <li>Mobile-first design</li>
+          <li>Basic SEO setup</li>
+        </ul>
+        <div class="sc-footer">
+          <span class="sc-price">from ₹7,999</span>
+          <a href="https://wa.me/919427209737?text=Hi!%20I%27m%20interested%20in%20a%20Business%20Website." class="sc-cta" target="_blank" rel="noopener">Get This →</a>
+        </div>
+      </div>
+
+      <div class="service-card featured fade-in">
+        <div class="sc-badge">Most Popular</div>
+        <div class="sc-icon-wrap">🚀</div>
+        <div class="sc-number">02</div>
+        <h3 class="sc-title">Landing Page</h3>
+        <p class="sc-desc">A single high-conversion page focused on turning visitors into customers. Perfect for promotions, launches, and specific services.</p>
+        <ul class="sc-features">
+          <li>High-conversion single page</li>
+          <li>WhatsApp + call CTAs</li>
+          <li>Testimonials & trust section</li>
+          <li>Ultra-fast loading</li>
+          <li>Delivered in 2–3 days</li>
+        </ul>
+        <div class="sc-footer">
+          <span class="sc-price">from ₹4,999</span>
+          <a href="https://wa.me/919427209737?text=Hi!%20I%27m%20interested%20in%20a%20Landing%20Page." class="sc-cta featured-cta" target="_blank" rel="noopener">Get This →</a>
+        </div>
+      </div>
+
+      <div class="service-card fade-in">
+        <div class="sc-icon-wrap">🔄</div>
+        <div class="sc-number">03</div>
+        <h3 class="sc-title">Website Redesign</h3>
+        <p class="sc-desc">Old site looking dated or slow? I'll rebuild it with modern design, improved speed, and layouts that actually convert visitors into buyers.</p>
+        <ul class="sc-features">
+          <li>Modern UI & fresh look</li>
+          <li>Faster page speed</li>
+          <li>Better mobile layout</li>
+          <li>All content migrated</li>
+          <li>30-day free support</li>
+        </ul>
+        <div class="sc-footer">
+          <span class="sc-price">from ₹5,999</span>
+          <a href="https://wa.me/919427209737?text=Hi!%20I%27m%20interested%20in%20a%20Website%20Redesign." class="sc-cta" target="_blank" rel="noopener">Get This →</a>
+        </div>
+      </div>
+
+      <div class="service-card fade-in">
+        <div class="sc-icon-wrap">⚡</div>
+        <div class="sc-number">04</div>
+        <h3 class="sc-title">Speed Optimization</h3>
+        <p class="sc-desc">Slow website losing customers and ranking? I'll optimize your site to load in under 2 seconds — and Google will reward you with better rankings.</p>
+        <ul class="sc-features">
+          <li>Before/after speed report</li>
+          <li>Image & code optimization</li>
+          <li>Google PageSpeed boost</li>
+          <li>Mobile speed fixes</li>
+          <li>Better Google ranking</li>
+        </ul>
+        <div class="sc-footer">
+          <span class="sc-price">from ₹2,999</span>
+          <a href="https://wa.me/919427209737?text=Hi!%20I%27m%20interested%20in%20Speed%20Optimization." class="sc-cta" target="_blank" rel="noopener">Get This →</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════
+     PORTFOLIO
+════════════════════════════════ -->
+<section class="portfolio-section section-dark" id="portfolio">
+  <div class="container">
+    <div class="section-head fade-in">
+      <span class="section-label">My Work</span>
+      <h2 class="section-title">Recent <em>Projects</em></h2>
+      <p class="section-desc">Websites built for local businesses exactly like yours.</p>
+    </div>
+    <div class="portfolio-grid">
+
+      <div class="project-card fade-in">
+        <div class="project-thumb thumb-1">
+          <div class="thumb-inner">
+            <div class="thumb-browser">
+              <div class="tb-dots"><span></span><span></span><span></span></div>
+              <div class="tb-url"></div>
+            </div>
+            <a href="https://shiv-enterprises-9ees.onrender.com" target="_blank" class="project-card">
             <div class="project-img logo-frame">
                 <img src="https://i.ibb.co/nMRjSxkd/Whats-App-Image-2026-02-11-at-7-22-29-PM.jpg/300x300.png?text=Shiv+Enterprises" alt="Business websie for Shiv Enterprises in India">
             </div>
-            <div class="project-info">
-                <h3>Shiv Enterprises</h3>
-                <p>Corporate-style website designed for lead generation.</p>
-                <div class="project-case">
-                <p><strong>Problem:</strong> No strong digital presence to establish professionalism and trust</p>
-                <p><strong>Solution:</strong> Designed a structured,corporate-style website focused in clarity and performance.</p>
-                <p><strong>Result:</strong> A polished online presence that improves brand credibility and client confidence.</p>
-              </div>
-                <div class="tags"><span>GSAP</span><span>Frontend</span></div>
+          </div>
+          <div class="project-tag-chip">Enterprise</div>
+        </div>
+        <div class="project-info">
+          <h3 class="project-name">Shiv enterprises</h3>
+          <p class="project-desc-text">Trust-focused website with location, hours, WhatsApp contact, and product categories.</p>
+          <div class="project-actions">
+            <a href="https://shiv-enterprises-9ees.onrender.com" class="p-btn-demo">↗ Live Demo</a>
+            <a href="#contact" class="p-btn-clone">Build Similar</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card fade-in">
+        <div class="project-thumb thumb-2">
+          <div class="thumb-inner">
+            <div class="thumb-browser">
+              <div class="tb-dots"><span></span><span></span><span></span></div>
+              <div class="tb-url"></div>
             </div>
-        </a>
-    </div> 
+            <a href="https://Dharashuddhjal.onrender.com" target="_blank" class="project-card">
+            <div class="project-img logo-frame">
+                <img src="image.jpeg" alt="Business websie for Dharashuddhjal in Mathal">
+            </div>
+            <div class="thumb-body">
+            </div>
+          </div>
+          <div class="project-tag-chip">Water supplier</div>
+        </div>
+        <div class="project-info">
+          <h3 class="project-name">Dharashuddhjal</h3>
+          <p class="project-desc-text">Modern Water supplier with filtered water,100% hygenic water, and quick WhatsApp enquiry.</p>
+          <div class="project-actions">
+            <a href="https://Dharashuddhjal.onrender.com" class="p-btn-demo">↗ Live Demo</a>
+            <a href="#contact" class="p-btn-clone">Build Similar</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card fade-in">
+        <div class="project-thumb thumb-3">
+          <div class="thumb-inner">
+            <div class="thumb-browser">
+              <div class="tb-dots"><span></span><span></span><span></span></div>
+              <div class="tb-url"></div>
+            </div>
+            <div class="thumb-body">
+              <div class="tb-line wide" style="background:rgba(253,186,116,0.8)"></div>
+              <div class="tb-line medium"></div>
+              <div class="tb-line short"></div>
+              <div class="tb-btn" style="background:#fdba74;color:#451000;">Order Now</div>
+            </div>
+          </div>
+          <div class="project-tag-chip">Mehandi Designer</div>
+        </div>
+        <div class="project-info">
+          <h3 class="project-name">Mehandi art by PN</h3>
+          <p class="project-desc-text">Mouthwatering site with menu, gallery, location, and WhatsApp ordering.</p>
+          <div class="project-actions">
+            <a href="#contact" class="p-btn-demo">↗ Live Demo</a>
+            <a href="#contact" class="p-btn-clone">Build Similar</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card fade-in">
+        <div class="project-thumb thumb-4">
+          <div class="thumb-inner">
+            <div class="thumb-browser">
+              <div class="tb-dots"><span></span><span></span><span></span></div>
+              <div class="tb-url"></div>
+            </div>
+            <div class="thumb-body">
+              <div class="tb-line wide" style="background:rgba(134,239,172,0.8)"></div>
+              <div class="tb-line medium"></div>
+              <div class="tb-line short"></div>
+              <div class="tb-btn" style="background:#86efac;color:#052e16;">Join Now</div>
+            </div>
+          </div>
+          <div class="project-tag-chip">Fitness</div>
+        </div>
+        <div class="project-info">
+          <h3 class="project-name">FitZone Gym, Bhuj</h3>
+          <p class="project-desc-text">High-energy gym site with memberships, class schedule, and trainer profiles.</p>
+          <div class="project-actions">
+            <a href="#contact" class="p-btn-demo">↗ Live Demo</a>
+            <a href="#contact" class="p-btn-clone">Build Similar</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card fade-in">
+        <div class="project-thumb thumb-5">
+          <div class="thumb-inner">
+            <div class="thumb-browser">
+              <div class="tb-dots"><span></span><span></span><span></span></div>
+              <div class="tb-url"></div>
+            </div>
+            <div class="thumb-body">
+              <div class="tb-line wide accent-line"></div>
+              <div class="tb-line medium"></div>
+              <div class="tb-line short"></div>
+              <div class="tb-btn" style="background:#a8ff47;color:#0a0f0d;">Order Water</div>
+            </div>
+          </div>
+          <div class="project-tag-chip">Water Co.</div>
+        </div>
+        <div class="project-info">
+          <h3 class="project-name">Kutch Pure Water Supply</h3>
+          <p class="project-desc-text">Simple, effective landing page with pricing and WhatsApp ordering.</p>
+          <div class="project-actions">
+            <a href="#contact" class="p-btn-demo">↗ Live Demo</a>
+            <a href="#contact" class="p-btn-clone">Build Similar</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card fade-in">
+        <div class="project-thumb thumb-6">
+          <div class="thumb-inner">
+            <div class="thumb-browser">
+              <div class="tb-dots"><span></span><span></span><span></span></div>
+              <div class="tb-url"></div>
+            </div>
+            <div class="thumb-body">
+              <div class="tb-line wide" style="background:rgba(253,211,77,0.8)"></div>
+              <div class="tb-line medium"></div>
+              <div class="tb-line short"></div>
+              <div class="tb-btn" style="background:#fdd34d;color:#3d1f06;">View Plots</div>
+            </div>
+          </div>
+          <div class="project-tag-chip">Real Estate</div>
+        </div>
+        <div class="project-info">
+          <h3 class="project-name">Kutch Land & Properties</h3>
+          <p class="project-desc-text">Property listings with map, contact form, and WhatsApp inquiry buttons.</p>
+          <div class="project-actions">
+            <a href="#contact" class="p-btn-demo">↗ Live Demo</a>
+            <a href="#contact" class="p-btn-clone">Build Similar</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
 </section>
 
-
-
-<section id="reviews">
-    <div class="section-header">
-        <h2 class="section-title">Client Ratings</h2>
-        <p class="section-sub">What my clients say about the work.</p>
+<!-- ════════════════════════════════
+     TESTIMONIALS
+════════════════════════════════ -->
+<section class="reviews-section section-mid" id="reviews">
+  <div class="container">
+    <div class="section-head fade-in">
+      <span class="section-label section-label-light">Client Stories</span>
+      <h2 class="section-title section-title-light">What Business Owners <em>Say</em></h2>
     </div>
     <div class="reviews-grid">
-        <div class="review-card">
-            <div class="stars">★★★★★</div>
-            <p>"Shubham completely transformed our online presence. The animations are subtle but make us look 10x more professional."</p>
-            <div class="review-author">
-                <div class="author-info">
-                    <h4>Dev Chaudhary</h4>
-                    <span>CEO, Dhara Shuddh Jal</span>
-                </div>
-            </div>
+
+      <div class="review-card fade-in">
+        <div class="rc-stars">★★★★★</div>
+        <p class="rc-text">"Shubham built my Water supplier website in just 3 days. Customers started finding us on Google within the first week. Best investment I made for my shop!"</p>
+        <div class="rc-author">
+          <div class="rc-avatar">CD</div>
+          <div>
+            <strong class="rc-name">Chaudhary Dev</strong>
+            <span class="rc-biz">Dharashuddhjal, Mathal</span>
+          </div>
         </div>
-        <div class="review-card">
-            <div class="stars">★★★★★</div>
-            <p>"Fast, reliable, and very clean code. He understood exactly what we needed for our lead generation forms."</p>
-            <div class="review-author">
-                <div class="author-info">
-                    <h4>Dhiren Nayani</h4>
-                    <span>Founder, Shiv Enterprises</span>
-                </div>
-            </div>
+      </div>
+
+      <div class="review-card fade-in">
+        <div class="rc-stars">★★★★★</div>
+        <p class="rc-text">"Very happy with the website created by Shubham for Shiv Enterprises. The design is neat and customers can easily view our services and contact us. Highly recommended for website development."</p>
+        <div class="rc-author">
+          <div class="rc-avatar">DN</div>
+          <div>
+            <strong class="rc-name">Dhirendra Nayani</strong>
+            <span class="rc-biz">Shiv Enterprise, Kotda jadodar</span>
+          </div>
         </div>
+      </div>
+
+      <div class="review-card fade-in">
+        <div class="rc-stars">★★★★★</div>
+        <p class="rc-text">"Very professional. He understood exactly what I needed and designed something way better than I expected. Price is very reasonable too."</p>
+        <div class="rc-author">
+          <div class="rc-avatar">PD</div>
+          <div>
+            <strong class="rc-name">Pratha Dayani </strong>
+            <span class="rc-biz">Mehandi art by PN, Surat</span>
+          </div>
+        </div>
+      </div>
+
     </div>
+  </div>
 </section>
 
-<section id="about">
-   
-    <div class="about-container">
-        <div class="about-img-wrapper">
-            <img src="shubham.jpeg" alt="Shubham Nayani frontend developer from Gujarat India" class="about-photo">
-            <div class="img-overlay"></div>
-        </div>
 
-        <div class="about-content">
-            <div class="badge">About Me</div>
-            <h2 class="about-title">Engineering logic.<br><span>Photographer's eye.</span></h2>
-            
-            <p class="about-desc">
-                I am currently pursuing my <strong>Diploma in Computer Engineering</strong> while working as a freelance frontend developer. 
-                <br><br>
-                Based in <strong>Kotda Jadodar</strong>, I don't just write code; I craft experiences. My background in <strong>Photography</strong> gives me a unique advantage—I understand composition, lighting, and visual aesthetics better than the average coder.
-            </p>
-
-            <div class="about-details">
-                <div class="detail-item">
-                    <span>Location</span>
-                    <h4>Kotda Jadodar, Gujarat</h4>
-                </div>
-                <div class="detail-item">
-                    <span>Education</span>
-                    <h4>Diploma in Comp. Eng.</h4>
-                </div>
-                <div class="detail-item">
-                    <span>Passion</span>
-                    <h4>Coding & Photography</h4>
-                </div>
-            </div>
-
-            <div class="btn-group" style="margin-top: 35px;">
-                <a href="#contact" class="btn btn-primary">Hire Me</a> 
-            </div>
-        </div>
+<!-- ════════════════════════════════
+     PROCESS
+════════════════════════════════ -->
+<section class="process-section section-mid" id="process">
+  <div class="container">
+    <div class="section-head fade-in">
+      <span class="section-label section-label-light">How It Works</span>
+      <h2 class="section-title section-title-light">From Chat to <em>Live Website</em></h2>
+      <p class="section-desc section-desc-light">A stress-free, transparent process built for busy business owners.</p>
     </div>
+    <div class="process-track">
+      <div class="process-line" aria-hidden="true"></div>
+      <div class="process-steps">
+
+        <div class="process-step fade-in">
+          <div class="ps-num">
+            <span>1</span>
+            <div class="ps-icon-bg">💬</div>
+          </div>
+          <div class="ps-body">
+            <div class="ps-day">Day 1</div>
+            <h3 class="ps-title">We Discuss Your Needs</h3>
+            <p class="ps-desc">WhatsApp me about your business. I'll ask a few simple questions — no jargon, no forms. Just a quick conversation.</p>
+          </div>
+        </div>
+
+        <div class="process-step fade-in">
+          <div class="ps-num">
+            <span>2</span>
+            <div class="ps-icon-bg">🎨</div>
+          </div>
+          <div class="ps-body">
+            <div class="ps-day">Day 2–4</div>
+            <h3 class="ps-title">I Design & Build</h3>
+            <p class="ps-desc">You share photos and business info. I design and build your custom website, then send you a preview link to review everything.</p>
+          </div>
+        </div>
+
+        <div class="process-step fade-in">
+          <div class="ps-num">
+            <span>3</span>
+            <div class="ps-icon-bg">✅</div>
+          </div>
+          <div class="ps-body">
+            <div class="ps-day">Day 4–5</div>
+            <h3 class="ps-title">You Review & Approve</h3>
+            <p class="ps-desc">Review the design, request any changes. Once you're 100% happy, I set up your domain and hosting — we go live.</p>
+          </div>
+        </div>
+
+        <div class="process-step fade-in">
+          <div class="ps-num">
+            <span>4</span>
+            <div class="ps-icon-bg">🚀</div>
+          </div>
+          <div class="ps-body">
+            <div class="ps-day">Day 5+</div>
+            <h3 class="ps-title">Your Business is Online</h3>
+            <p class="ps-desc">Your website is live! Customers can find you, see your work, and WhatsApp you directly. 30 days of free support included.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
 </section>
 
-<section class="process">
-    <div class="process-grid">
-        <div class="process-step">
-            <span class="step-number">01</span>
-            <h3>Discovery & Strategy</h3>
-        </div>
-        <div class="process-step">
-            <span class="step-number">02</span>
-            <h3>Wireframing & UX</h3>
-        </div>
-        <div class="process-step">
-            <span class="step-number">03</span>
-            <h3>Development</h3>
-        </div>
-        <div class="process-step">
-            <span class="step-number">04</span>
-            <h3>Testing & Launch</h3>
-        </div>
+<!-- ════════════════════════════════
+     PRICING
+════════════════════════════════ -->
+<section class="pricing-section section-dark" id="pricing">
+  <div class="container">
+    <div class="section-head fade-in">
+      <span class="section-label">Transparent Pricing</span>
+      <h2 class="section-title">Simple, <em>Honest Pricing</em></h2>
+      <p class="section-desc">No hidden fees. Pay 50% to start, 50% only after you approve the final design.</p>
     </div>
+    <div class="pricing-grid">
+
+      <div class="pricing-card fade-in">
+        <div class="pc-tier">Starter</div>
+        <div class="pc-price">₹3,999</div>
+        <div class="pc-delivery">⏱ Delivered in 2–3 days</div>
+        <ul class="pc-features">
+          <li><span class="pf-check">✓</span>Single-page website</li>
+          <li><span class="pf-check">✓</span>Business info &amp; contact</li>
+          <li><span class="pf-check">✓</span>WhatsApp button</li>
+          <li><span class="pf-check">✓</span>Google Maps location</li>
+          <li><span class="pf-check">✓</span>Mobile-responsive design</li>
+          <li><span class="pf-check">✓</span>Domain &amp; hosting guidance</li>
+        </ul>
+        <a href="https://wa.me/919427209737?text=Hi!%20I%27m%20interested%20in%20the%20Starter%20package." class="pc-btn" target="_blank" rel="noopener">Get Started</a>
+      </div>
+
+      <div class="pricing-card popular fade-in">
+        <div class="pc-ribbon">Best Value</div>
+        <div class="pc-tier">Business</div>
+        <div class="pc-price">₹7,999 <del class="pc-old">₹12,999</del></div>
+        <div class="pc-delivery">⏱ Delivered in 3–5 days</div>
+        <ul class="pc-features">
+          <li><span class="pf-check">✓</span>Up to 5 pages</li>
+          <li><span class="pf-check">✓</span>Custom branding design</li>
+          <li><span class="pf-check">✓</span>WhatsApp + call integration</li>
+          <li><span class="pf-check">✓</span>Gallery / product section</li>
+          <li><span class="pf-check">✓</span>SEO basics setup</li>
+          <li><span class="pf-check">✓</span>30 days free support</li>
+          <li><span class="pf-check">✓</span>Domain &amp; hosting setup</li>
+        </ul>
+        <a href="https://wa.me/919427209737?text=Hi!%20I%27m%20interested%20in%20the%20Business%20package." class="pc-btn pc-btn-pop" target="_blank" rel="noopener">Get Started</a>
+      </div>
+
+      <div class="pricing-card fade-in">
+        <div class="pc-tier">Premium</div>
+        <div class="pc-price">₹14,999</div>
+        <div class="pc-delivery">⏱ Delivered in 5–7 days</div>
+        <ul class="pc-features">
+          <li><span class="pf-check">✓</span>Up to 8 pages</li>
+          <li><span class="pf-check">✓</span>Advanced custom design</li>
+          <li><span class="pf-check">✓</span>Contact / enquiry form</li>
+          <li><span class="pf-check">✓</span>Social media integration</li>
+          <li><span class="pf-check">✓</span>Full SEO optimization</li>
+          <li><span class="pf-check">✓</span>Performance optimization</li>
+          <li><span class="pf-check">✓</span>Analytics setup</li>
+          <li><span class="pf-check">✓</span>60 days priority support</li>
+        </ul>
+        <a href="https://wa.me/919427209737?text=Hi!%20I%27m%20interested%20in%20the%20Premium%20package." class="pc-btn" target="_blank" rel="noopener">Get Started</a>
+      </div>
+
+    </div>
+    <p class="pricing-note">Not sure which plan? <a href="https://wa.me/919427209737" target="_blank" rel="noopener">WhatsApp me</a> — I'll recommend the perfect fit for your budget.</p>
+  </div>
 </section>
 
-<section id="journey">
-    <div class="section-header">
-        <h2 class="section-title">My Journey</h2>
-        <p class="section-sub">Progression through learning, building, and shipping.</p>
+<!-- ════════════════════════════════
+     ABOUT
+════════════════════════════════ -->
+<section class="about-section section-dark" id="about">
+  <div class="container">
+    <div class="about-inner">
+      <div class="about-visual">
+        <div class="about-photo-frame">
+          <div class="about-photo-bg">
+            <img src="shubham.jpeg" class="avatar-img" alt="Shubham Web developer" >
+          </div>
+          <div class="about-frame-deco deco-tl"></div>
+          <div class="about-frame-deco deco-br"></div>
+        </div>
+        <div class="about-stat-card">
+          <div class="asc-num">25+</div>
+          <div class="asc-label">Websites Delivered</div>
+        </div>
+        <div class="about-stat-card asc-2">
+          <div class="asc-num">5★</div>
+          <div class="asc-label">Client Rating</div>
+        </div>
+      </div>
+      <div class="about-content fade-in">
+        <span class="section-label">About Me</span>
+        <h2 class="section-title">Hi, I'm <em>Shubham</em> —<br/>Your Local Web Dev</h2>
+        <p class="about-bio">I'm a web developer from Gujarat, passionate about helping local businesses succeed online. I've spent months building websites specifically for shops, clinics, restaurants, and services across Kutch.</p>
+        <p class="about-bio">I don't build websites to show off code. I build them to <strong>bring you more customers</strong>. Every design decision is made to make it easier for your customers to find you, trust you, and reach out.</p>
+        <div class="skill-tags">
+          <span class="skill-tag">HTML &amp; CSS</span>
+          <span class="skill-tag">JavaScript</span>
+          <span class="skill-tag">Mobile-First</span>
+          <span class="skill-tag">WhatsApp Integration</span>
+          <span class="skill-tag">SEO</span>
+          <span class="skill-tag">Speed Optimization</span>
+          <span class="skill-tag">Gujarati · Hindi · English</span>
+        </div>
+        <div class="about-ctas">
+          <a href="#contact" class="btn-primary">Work With Me</a>
+          <a href="https://wa.me/919427209737" class="btn-wa" target="_blank" rel="noopener">💬 WhatsApp</a>
+        </div>
+      </div>
     </div>
-    
+  </div>
+</section>
+
+<!-- ════════════════════════════════
+     MY JOURNEY
+════════════════════════════════ -->
+<section class="journey-section section-dark" id="journey">
+  <div class="container">
+
+    <div class="section-head fade-in">
+      <span class="section-label">My Journey</span>
+      <h2 class="section-title">From Learning Code to <em>Building Real Websites</em></h2>
+      <p class="section-desc">
+        My journey as a web developer helping local businesses go online.
+      </p>
+    </div>
+
     <div class="journey-grid">
-        
-    <div class="journey-card">
-      <div class="journey-top">
-        <span class="journey-date">2026 — Present</span>
-        <span class="journey-arrow">↗</span>
+
+      <div class="journey-card">
+        <div class="journey-year">Aug-2025</div>
+        <h3>Started Learning Web Development</h3>
+        <p>
+          Began learning HTML, CSS and JavaScript and built my first practice websites.
+        </p>
       </div>
 
-      <h3>Diploma Student — Computer Engineering</h3>
-      <h4>Government Polytechnic Bhuj</h4>
-
-      <p>
-        Pursuing a diploma in Computer Engineering while actively applying development
-        skills through projects and freelancing. Strengthening technical fundamentals
-        and professional communication.
-      </p>
-
-      <div class="journey-tags">
-        <span>C Programming</span>
-        <span>Computer Fundamentals</span>
-        <span>Teamwork</span>
-        <span>Communication</span>
-      </div>
-    </div>
-
-    <div class="journey-card">
-      <div class="journey-top">
-        <span class="journey-date">Sep 2025</span>
-        <span class="journey-arrow">↗</span>
+      <div class="journey-card">
+        <div class="journey-year">Sep-2025</div>
+        <h3>First Real Client Website</h3>
+        <p>
+          Built my first website for a local business and saw how websites help businesses get customers.
+        </p>
       </div>
 
-      <h3>Frontend Web Developer (Beginner)</h3>
-      <h4>Self-Learning</h4>
-
-      <p>
-        Started web development with HTML, CSS, and JavaScript.
-        Built UI layouts and small interactive projects,
-        forming a strong frontend foundation.
-      </p>
-
-      <div class="journey-tags">
-        <span>HTML</span>
-        <span>CSS</span>
-        <span>JavaScript</span>
+      <div class="journey-card">
+        <div class="journey-year">Dec-2025</div>
+        <h3>Helping Local Businesses</h3>
+        <p>
+          Started building fast websites for shops, services and local businesses in Gujarat.
+        </p>
       </div>
+
+      <div class="journey-card">
+        <div class="journey-year">Today</div>
+        <h3>Building Websites That Grow Businesses</h3>
+        <p>
+          Focused on creating modern websites that bring real customers and enquiries.
+        </p>
+      </div>
+
     </div>
 
   </div>
 </section>
 
-<a href="#contact" id="sticky-cta">Start Project</a>
+<!-- ════════════════════════════════
+     FAQ
+════════════════════════════════ -->
+<section class="faq-section section-mid" id="faq">
+  <div class="container">
 
-<section id="faq">
-    <div class="section-header">
-        <h2 class="section-title">Common Questions</h2>
+    <div class="section-head fade-in">
+      <span class="section-label">Questions</span>
+      <h2 class="section-title">Frequently Asked <em>Questions</em></h2>
     </div>
 
-    <div class="faq-item">
-        <button class="faq-question" aria-expanded="false">
-            How much does a website cost in India?
-            <span class="plus">+</span>
+    <div class="faq-container">
+
+      <div class="faq-item">
+        <button class="faq-question">
+          How much does a website cost?
         </button>
         <div class="faq-answer">
-            It depends on the scope. A simple landing page starts at ₹5,000 to ₹18,000, while a full business site ranges from ₹5,000 to ₹40,000 depending on animations and features.
+          My websites start from ₹3,999 depending on features and number of pages.
         </div>
-    </div>
+      </div>
 
-    <div class="faq-item">
-        <button class="faq-question" aria-expanded="false">
-            How long does it take to build a business website?
-            <span class="plus">+</span>
+      <div class="faq-item">
+        <button class="faq-question">
+          How long does it take to build a website?
         </button>
         <div class="faq-answer">
-            Typically 1–2 weeks for a standard 5-page business website. Speed without sacrificing quality.
+          Most websites are completed within 2–5 days after receiving content.
         </div>
-    </div>
+      </div>
 
-    <div class="faq-item">
-        <button class="faq-question" aria-expanded="false">
-            Do you provide hosting?
-            <span class="plus">+</span>
+      <div class="faq-item">
+        <button class="faq-question">
+          Will my website work on mobile?
         </button>
         <div class="faq-answer">
-            I help you set it up on your own account or manage it for a small monthly fee.
+          Yes. Every website I build is mobile-first and works perfectly on phones.
         </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">
+          Can customers contact me on WhatsApp?
+        </button>
+        <div class="faq-answer">
+          Yes. I integrate WhatsApp buttons so customers can message you directly.
+        </div>
+      </div>
+
     </div>
+
+  </div>
 </section>
 
-  <section id="social">
+<!-- ====================
+   social       
+   ====================-->
+    <section id="social">
     <div class="social-text">
       <h2>Social Media</h2>
       <p>Let's connect</p>
@@ -1038,154 +950,164 @@ business websites with smooth GSAP animations that convert visitors into custome
 
     
   </section>
+<!-- ════════════════════════════════
+     CONTACT
+════════════════════════════════ -->
+<section class="contact-section section-dark" id="contact">
+  <div class="container">
+    <div class="contact-inner">
+      <div class="contact-info fade-in">
+        <span class="section-label">Contact Me</span>
+        <h2 class="section-title">Let's Build Your<br/><em>Website Today</em></h2>
+        <p class="contact-sub">Have questions or ready to start? Reach out on WhatsApp for the fastest reply — or fill the form.</p>
 
-<section id="contact">
-    <div class="cta-section">
-        <h2>Ready to upgrade?</h2>
-        <p style="color: #999; margin-bottom: 30px;">Let's build a website that actually works for your business.</p>
-        <div class="btn-group" style="justify-content:center; margin-top:0;">
-            <a href="https://wa.me/919427209737" class="btn btn-primary">WhatsApp Me</a>
-            <a href="mailto:shubhamnayani0110@gmail.com" class="btn btn-secondary">Copy Email</a>
+        <div class="contact-channels">
+          <a href="https://wa.me/919427209737?text=Hi%20Shubham!%20I%27m%20interested%20in%20a%20website." class="contact-channel wa-channel" target="_blank" rel="noopener">
+            <span class="cc-icon">💬</span>
+            <div>
+              <strong>WhatsApp — Fastest Reply</strong>
+              <span>+91 94272 09737 · Reply in minutes</span>
+            </div>
+            <span class="cc-arrow">→</span>
+          </a>
+          <a href="mailto:shubhamnayani@gmail.com" class="contact-channel">
+            <span class="cc-icon">✉️</span>
+            <div>
+              <strong>Email Me</strong>
+              <span>shubhamnayani@gmail.com</span>
+            </div>
+            <span class="cc-arrow">→</span>
+          </a>
+          <a href="https://www.instagram.com/shubhm_nayani" class="contact-channel" target="_blank" rel="noopener">
+            <span class="cc-icon">📸</span>
+            <div>
+              <strong>Instagram</strong>
+              <span>@shubhm_nayani</span>
+            </div>
+            <span class="cc-arrow">→</span>
+          </a>
         </div>
+      </div>
+
+      <div class="contact-form-card fade-in">
+        <div id="contactForm">
+          <div class="cf-header">
+            <h3>Tell Me About Your Business</h3>
+            <p>Free consultation — no obligation to commit.</p>
+          </div>
+          <div class="cf-row">
+            <div class="cf-group">
+              <label for="fname">Your Name *</label>
+              <input type="text" id="fname" placeholder="Ramesh Kumar" required autocomplete="name"/>
+            </div>
+            <div class="cf-group">
+              <label for="fphone">WhatsApp Number *</label>
+              <input type="tel" id="fphone" placeholder="+91 98765 43210" required autocomplete="tel"/>
+            </div>
+          </div>
+          <div class="cf-group">
+            <label for="fbtype">Business Type</label>
+            <select id="fbtype">
+              <option value="">Select your business type...</option>
+              <option>Medical Store / Pharmacy</option>
+              <option>Telecom / Mobile Shop</option>
+              <option>Restaurant / Food Business</option>
+              <option>Gym / Fitness Center</option>
+              <option>Beauty Parlour / Salon</option>
+              <option>Water Delivery / Service</option>
+              <option>General Shop / Retail</option>
+              <option>Real Estate / Property</option>
+              <option>Other Local Business</option>
+            </select>
+          </div>
+          <div class="cf-group">
+            <label for="fpackage">Package Interest</label>
+            <select id="fpackage">
+              <option>Starter Website — ₹3,999</option>
+              <option>Business Website — ₹7,999</option>
+              <option>Premium Website — ₹14,999</option>
+              <option>Website Redesign</option>
+              <option>Speed Optimization</option>
+              <option>Not sure yet — need advice</option>
+            </select>
+          </div>
+          <div class="cf-group">
+            <label for="fmsg">Tell me about your business</label>
+            <textarea id="fmsg" rows="4" placeholder="e.g. I run a medical store in Bhuj and need a website to show my location, timings, products and WhatsApp number..."></textarea>
+          </div>
+          <button class="cf-submit" id="cfSubmit" type="button">
+            <span class="cf-submit-text">Send Message & Get a Quote 🚀</span>
+            <span class="cf-submit-loading" hidden>Sending...</span>
+          </button>
+        </div>
+        <div class="form-success" id="formSuccess" hidden>
+          <div class="fs-icon">✅</div>
+          <h4>Message Sent!</h4>
+          <p>Thank you! I'll reach out to your WhatsApp within a few hours. Get ready for your new website! 🎉</p>
+        </div>
+      </div>
     </div>
+  </div>
 </section>
 
-<footer>
-    <div>© 2026 Shubham Nayani</div>
-    <div>Web Developer based in India</div>
+<!-- ════════════════════════════════
+     FOOTER
+════════════════════════════════ -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="footer-logo">Shubham<span>.</span></div>
+        <p class="footer-tagline">Web developer building fast, mobile-first websites for local businesses in Kutch, Gujarat.</p>
+        <div class="footer-socials">
+          <a href="https://wa.me/919427209737" target="_blank" rel="noopener" aria-label="WhatsApp">💬</a>
+          <a href="https://www.instagram.com/shubhm_nayani" target="_blank" rel="noopener" aria-label="Instagram">📸</a>
+          <a href="mailto:shubhamnayani@gmail.com" aria-label="Email">✉️</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h5>Services</h5>
+        <ul>
+          <li><a href="#services">Business Website</a></li>
+          <li><a href="#services">Landing Page</a></li>
+          <li><a href="#services">Website Redesign</a></li>
+          <li><a href="#services">Speed Optimization</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Quick Links</h5>
+        <ul>
+          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="#pricing">Pricing</a></li>
+          <li><a href="#reviews">Reviews</a></li>
+          <li><a href="#about">About Me</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Contact</h5>
+        <ul>
+          <li><a href="https://wa.me/919427209737" target="_blank" rel="noopener">+91 94272 09737</a></li>
+          <li><a href="mailto:shubhamnayani0110@gmail.com">shubhamnayani0110@gmail.com</a></li>
+          <li><a href="https://www.instagram.com/shubhm_nayani" target="_blank" rel="noopener">@shubhm_nayani</a></li>
+          <li>Bhuj, Kutch, Gujarat 🇮🇳</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Shubham Nayani. Made with ♥ in Gujarat.</p>
+      <p class="footer-badge">Fast · Mobile-First · Local</p>
+    </div>
+  </div>
 </footer>
 
-<script>
-  const progressBar = document.getElementById("scroll-progress");
-const stickyCTA = document.getElementById("sticky-cta");
+<!-- WhatsApp FAB -->
+<a href="https://wa.me/919427209737?text=Hi%20Shubham!%20I%27m%20interested%20in%20a%20website." class="wa-fab" target="_blank" rel="noopener" aria-label="Chat on WhatsApp" title="Chat on WhatsApp">
+  <span class="wa-fab-icon">💬</span>
+  <span class="wa-fab-ring"></span>
+</a>
 
-window.addEventListener("scroll", () => {
-  const scrollTop = window.scrollY;
-  const docHeight =
-    document.documentElement.scrollHeight - window.innerHeight;
-
-  const progress = (scrollTop / docHeight) * 100;
-  progressBar.style.width = `${progress}%`;
-
-  if (progress > 40) {
-    stickyCTA.classList.add("show");
-  } else {
-    stickyCTA.classList.remove("show");
-  }
-});
-    gsap.registerPlugin(ScrollTrigger);
-
-    // Hero Animation
-    gsap.set(".nav-links a", { opacity: 1 });
-
-gsap.from(".nav-logo", {
-  y: -20,
-  opacity: 0,
-  duration: 0.6
-});
-
-gsap.from(".nav-links a", {
-  y: -10,
-  opacity: 0,
-  duration: 0.4,
-  stagger: 0.08,
-  clearProps: "opacity,transform"
-});
-
-gsap.from(".journey-grid", {
-  scrollTrigger: {
-    trigger: "#journey",
-    start: "top 80%",
-  },
-  opacity: 0,
-  duration: 0.6,
-  clearProps: "opacity"
-});
-
-    // About Section Specific Animation
-    gsap.from(".about-img-wrapper", {
-        scrollTrigger: {
-            trigger: "#about",
-            start: "top 80%",
-        },
-        x: -50,
-        opacity: 0,
-        duration: 1
-    });
-
-    gsap.from(".about-content", {
-        scrollTrigger: {
-            trigger: "#about",
-            start: "top 80%",
-        },
-        x: 50,
-        opacity: 0,
-        duration: 1,
-        delay: 0.2
-    });
-
-    // Sections Reveal on Scroll (Excluding About to prevent conflict)
-   gsap.utils.toArray(".section-header").forEach(header => {
-  gsap.from(header, {
-    scrollTrigger: {
-      trigger: header,
-      start: "top 85%",
-    },
-    y: 40,
-    opacity: 0,
-    duration: 0.6,
-    clearProps: "all"
-  });
-});
-
-// card logic
-   const cards = document.querySelectorAll(".card");
-    const container = document.getElementById("cards");
-
-    container.addEventListener("mousemove", (e) => {
-      cards.forEach(card => {
-        const rect = card.getBoundingClientRect();
-        card.style.setProperty("--mouse-x", e.clientX - rect.left + "px");
-        card.style.setProperty("--mouse-y", e.clientY - rect.top + "px");
-      });
-    });
-
-    container.addEventListener("mouseleave", () => {
-      cards.forEach(card => {
-        card.style.setProperty("--mouse-x", "50%");
-        card.style.setProperty("--mouse-y", "50%");
-      });
-    });
-
-// FAQ Logic — FIXED
-const items = document.querySelectorAll('.faq-item');
-
-items.forEach(item => {
-  const btn = item.querySelector('.faq-question');
-  const answer = item.querySelector('.faq-answer');
-
-  btn.addEventListener('click', () => {
-    const isOpen = item.classList.contains('active');
-
-    items.forEach(i => {
-      i.classList.remove('active');
-      i.querySelector('.faq-answer').style.height = '0px';
-      i.querySelector('.faq-question')
-        .setAttribute('aria-expanded', 'false');
-    });
-
-    if (!isOpen) {
-      item.classList.add('active');
-      answer.style.height = answer.scrollHeight + 'px';
-      btn.setAttribute('aria-expanded', 'true');
-    }
-  });
-});
-
-</script>
-
+<!-- Scripts -->
+<script src="main.js"></script>
 </body>
-
 </html>
-
-
