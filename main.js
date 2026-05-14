@@ -16,8 +16,14 @@
     initActiveNavLinks();
     initContactForm();
     initWAFabPulse();
+    initCardInteractions();
   }
 
+
+
+  const blinker = document.querySelector('.blinker');
+    setInterval(() => blinker.style.opacity = blinker.style.opacity === '0' ? '1' : '0', 500);
+  
   /* ═════════════════════════════════════════
      NAVBAR — scroll shadow + active state
   ═════════════════════════════════════════ */
@@ -33,6 +39,52 @@
     onScroll(); // run on load
   }
 
+
+    /* ========================================
+        Process
+  =======================================*/
+
+/* ── Progress steps overlay --*/
+const processSection = document.getElementById('process');
+const card = document.querySelectorAll('.process-card');
+
+function updateProcess() {
+  const rect = processSection.getBoundingClientRect();
+  const vh = window.innerHeight;
+
+  const scroll = -rect.top;
+  const maxScroll = rect.height - vh;
+
+  const progress = Math.max(0, Math.min(1, scroll / maxScroll));
+
+  const stepCount = card.length;
+  const stepProgress = progress * stepCount;
+
+  card.forEach((card, i) => {
+    const local = stepProgress - i;
+
+     // 🔹 CURRENT CARD (coming from bottom)
+     if (local > 0 && local < 1) {
+    card.style.opacity = 1;
+    card.style.transform = `translateY(${(1 - local) * window.innerHeight}px) scale(1)`;
+  }
+
+  // COMPLETED CARDS (stay behind)
+  else if (local >= 1) {
+    card.style.opacity = 1;
+    card.style.transform = `translateY(0px) scale(0.95)`;
+  }
+
+  // UPCOMING CARDS (fully off-screen bottom)
+  else {
+    card.style.opacity = 1;
+    card.style.transform = `translateY(${window.innerHeight}px) scale(1)`;
+    }
+  });
+}
+
+window.addEventListener('scroll', updateProcess);
+updateProcess();
   /* ═════════════════════════════════════════
      MOBILE MENU
   ═════════════════════════════════════════ */
@@ -82,6 +134,8 @@
     });
   }
 
+
+  
   /* ═════════════════════════════════════════
      SCROLL ANIMATIONS (IntersectionObserver)
   ═════════════════════════════════════════ */
@@ -158,6 +212,7 @@ document.querySelectorAll(".faq-question").forEach(btn=>{
 });
 
 
+
   /*========================
   social
   ========================*/
@@ -175,7 +230,7 @@ document.querySelectorAll(".faq-question").forEach(btn=>{
 
     container.addEventListener("mouseleave", () => {
       cards.forEach(card => {
-        card.style.setProperty("--mouse-x", "50%");
+        card.style.setProperty("- -mouse-x", "50%");
         card.style.setProperty("--mouse-y", "50%");
       });
     });
@@ -261,6 +316,52 @@ document.querySelectorAll(".faq-question").forEach(btn=>{
       fab.style.opacity = '1';
       fab.style.transform = 'scale(1) translateY(0)';
     }, 2000);
+  }
+
+  /* ═════════════════════════════════════════
+     CARD INTERACTIONS — advanced hover effects for all cards
+  ═════════════════════════════════════════ */
+  function initCardInteractions() {
+    const cards = document.querySelectorAll('.service-card, .project-card, .roadmap-card, .skill-card, .review-card');
+    if (!cards.length) return;
+
+    cards.forEach(card => {
+      card.addEventListener('mouseenter', () => {
+        card.classList.add('card-hover');
+      });
+
+      card.addEventListener('mouseleave', () => {
+        card.classList.remove('card-hover');
+        card.style.transform = '';
+        const icon = card.querySelector('.skill-icon, .sc-icon-wrap, .roadmap-icon');
+        if (icon) icon.style.transform = '';
+      });
+
+      card.addEventListener('mousemove', (e) => {
+        const rect = card.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+        const centerX = rect.width / 2;
+        const centerY = rect.height / 2;
+
+        // 3D tilt
+        const tiltX = (y - centerY) / centerY * -8;
+        const tiltY = (x - centerX) / centerX * 8;
+        card.style.transform = `perspective(1000px) rotateX(${tiltX}deg) rotateY(${tiltY}deg) translateY(-6px)`;
+
+        // Glow position via CSS variables
+        card.style.setProperty('--glow-x', `${(x / rect.width) * 100}%`);
+        card.style.setProperty('--glow-y', `${(y / rect.height) * 100}%`);
+
+        // Icon subtle animation
+        const icon = card.querySelector('.skill-icon, .sc-icon-wrap, .roadmap-icon');
+        if (icon) {
+          const iconTiltX = (y - centerY) / centerY * -5;
+          const iconTiltY = (x - centerX) / centerX * 5;
+          icon.style.transform = `rotateX(${iconTiltX}deg) rotateY(${iconTiltY}deg) scale(1.05)`;
+        }
+      });
+    });
   }
 
   /* ═════════════════════════════════════════
