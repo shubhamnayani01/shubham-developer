@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Privacy Policy for Shubham nayani kotda jadodar. Learn how we collect and protect your personal information.">
+    <meta name="keywords" content="privacy policy, Shubham nayani, data protection,Kotda Jadodar">
+    <meta name="author" content="Shubham nayani">
+    <link rel="icon" href="favicon.ico">
+    <title>Privacy Policy - Shubham Nayani</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet"/>
+    
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css"/>
+    
+    <style>
+        /* Privacy Policy Page Specific Styles */
+        
+        .privacy-container {
+            min-height: 100vh;
+            padding: 80px 0;
+            background: var(--bg-dark);
+        }
+
+        .privacy-header {
+            text-align: center;
+            padding: 60px 0 80px;
+            border-bottom: 1px solid var(--border);
+            background: linear-gradient(180deg, var(--bg-dark) 0%, var(--bg-mid) 100%);
+        }
+
+        .privacy-header h1 {
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            font-family: var(--font-display);
+            color: var(--text-primary);
+            margin-bottom: 16px;
+        }
+
+        .privacy-header p {
+            color: var(--text-sec);
+            font-size: 1.1rem;
+            margin: 0;
+        }
+
+        .privacy-content {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 5%;
+            padding-top: 60px;
+        }
+
+        .last-update {
+            background: var(--bg-card);
+            border: 1px solid var(--lime-border);
+            border-radius: var(--r-lg);
+            padding: 20px 24px;
+            margin-bottom: 40px;
+            color: var(--text-sec);
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        .last-update strong {
+            color: var(--lime);
+        }
+
+        .toc {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: var(--r-lg);
+            padding: 32px 28px;
+            margin-bottom: 60px;
+        }
+
+        .toc h2 {
+            font-size: 1.4rem;
+            color: var(--lime);
+            margin-bottom: 24px;
+            font-family: var(--font-display);
+        }
+
+        .toc ul {
+            list-style: none;
+            columns: 2;
+            gap: 32px;
+        }
+
+        .toc li {
+            margin-bottom: 12px;
+            break-inside: avoid;
+        }
+
+        .toc a {
+            color: var(--text-sec);
+            transition: all var(--t-fast);
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .toc a:hover {
+            color: var(--lime);
+        }
+
+        .privacy-section {
+            margin-bottom: 60px;
+            scroll-margin-top: 120px;
+        }
+
+        .privacy-section h2 {
+            font-size: 1.6rem;
+            font-family: var(--font-display);
+            color: var(--lime);
+            margin-bottom: 20px;
+            padding-bottom: 12px;
+            border-bottom: 1px solid var(--lime-border);
+        }
+
+        .privacy-section h3 {
+            font-size: 1.2rem;
+            color: var(--text-primary);
+            margin-top: 28px;
+            margin-bottom: 16px;
+            font-family: var(--font-display);
+        }
+
+        .privacy-section p {
+            color: var(--text-sec);
+            line-height: 1.8;
+            margin-bottom: 16px;
+            text-align: justify;
+        }
+
+        .privacy-section ul,
+        .privacy-section ol {
+            margin-left: 24px;
+            margin-bottom: 16px;
+            color: var(--text-sec);
+        }
+
+        .privacy-section li {
+            margin-bottom: 12px;
+            line-height: 1.7;
+        }
+
+        .privacy-section strong {
+            color: var(--lime);
+        }
+
+        .highlight-box {
+            background: var(--bg-card2);
+            border-left: 3px solid var(--lime);
+            border-radius: var(--r-md);
+            padding: 24px;
+            margin: 24px 0;
+            color: var(--text-sec);
+            line-height: 1.8;
+        }
+
+        .contact-section {
+            background: var(--bg-card);
+            border: 1px solid var(--lime-border);
+            border-radius: var(--r-lg);
+            padding: 32px;
+            margin-top: 60px;
+            margin-bottom: 40px;
+        }
+
+        .contact-section h2 {
+            margin-top: 0;
+        }
+
+        .contact-section p {
+            margin-bottom: 12px;
+        }
+
+        .contact-section a {
+            color: var(--lime);
+            text-decoration: none;
+            transition: all var(--t-fast);
+        }
+
+        .contact-section a:hover {
+            opacity: 0.8;
+        }
+
+        .data-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 24px 0;
+            background: var(--bg-card);
+            border-radius: var(--r-md);
+            overflow: hidden;
+        }
+
+        .data-table th {
+            background: var(--bg-card2);
+            color: var(--lime);
+            padding: 16px;
+            text-align: left;
+            font-weight: 600;
+            border-bottom: 1px solid var(--border);
+            font-family: var(--font-display);
+        }
+
+        .data-table td {
+            padding: 16px;
+            border-bottom: 1px solid var(--border);
+            color: var(--text-sec);
+        }
+
+        .data-table tr:hover {
+            background: var(--bg-card2);
+        }
+
+        .back-to-top {
+            display: grid;
+            border: 1px solid var(--lime-border);
+            border-radius: var(--r-lg);
+            color: var(--lime);
+            text-align: center;
+            cursor: pointer;
+            transition: all var(--t-fast);
+            padding: 16px;
+        }
+        .back-to-top:hover {
+            transform: translateY(-8px);
+            background: var(--bg-card);
+            box-shadow: 0 4px 12px rgba(167, 243, 208, 0.2);
+        }
+
+        .compliance-box {
+            background: var(--bg-card2);
+            border: 1px solid var(--lime-border);
+            border-radius: var(--r-lg);
+            padding: 28px;
+            margin-top: 40px;
+        }
+
+        .compliance-box h3 {
+            color: var(--lime);
+            margin-top: 0;
+        }
+
+        .compliance-box ul {
+            margin-left: 20px;
+        }
+        .footer{
+            text-align: center;
+            color: var(--lime);
+            background-color: #060a07;
+        }
+        /* Responsive */
+        @media (max-width: 768px) {
+            .privacy-header {
+                padding: 40px 0 60px;
+            }
+
+            .privacy-header h1 {
+                font-size: 2rem;
+            }
+
+            .toc {
+                padding: 24px;
+            }
+
+            .toc ul {
+                columns: 1;
+            }
+
+            .privacy-content {
+                padding-top: 40px;
+            }
+
+            .privacy-section h2 {
+                font-size: 1.3rem;
+            }
+
+            .privacy-section h3 {
+                font-size: 1.1rem;
+            }
+
+            .data-table th,
+            .data-table td {
+                padding: 12px;
+                font-size: 0.9rem;
+            }
+
+            .contact-section {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<!-- =============================
+        NAVBAR
+================================-->
+<nav class="terms-nav">
+      <div class="container">
+        <a href="index.html" class="back-link">← Back to Home</a>
+      </div>
+    </nav>    
+
+    <!-- ════════════════════════════════
+         PRIVACY POLICY CONTENT
+    ════════════════════════════════ -->
+    <div class="privacy-container">
+        <div class="privacy-header">
+            <div class="container">
+                <h1>Privacy Policy</h1>
+                <p>Your privacy matters to us</p>
+            </div>
+        </div>
+
+        <div class="privacy-content">
+            <!-- Last Updated -->
+            <div class="last-update">
+                <strong>Last Updated:</strong> April 2, 2026
+            </div>
+
+            <!-- Table of Contents -->
+            <div class="toc">
+                <h2>📑 Table of Contents</h2>
+                <ul>
+                    <li><a href="#introduction">1. Introduction</a></li>
+                    <li><a href="#information-collection">2. Information We Collect</a></li>
+                    <li><a href="#how-we-use">3. How We Use Your Information</a></li>
+                    <li><a href="#third-party">4. Third-Party Services</a></li>
+                    <li><a href="#data-sharing">5. Data Sharing</a></li>
+                    <li><a href="#data-security">6. Data Security</a></li>
+                    <li><a href="#user-rights">7. Your Rights</a></li>
+                    <li><a href="#external-links">8. External Links</a></li>
+                    <li><a href="#changes">9. Changes to This Policy</a></li>
+                    <li><a href="#contact">10. Contact</a></li>
+                </ul>
+            </div>
+
+            <!-- Section 1 -->
+            <section class="privacy-section" id="introduction">
+                <h2>1. Introduction</h2>
+                <p>Welcome to hubhamdeveloper.onrender.com. Your privacy is important to us. This Privacy Policy explains how we collect, use, and protect your information.</p>
+            </section>
+
+            <!-- Section 2 -->
+            <section class="privacy-section" id="information-collection">
+                <h2>2. Information We Collect</h2>
+                <p>We may collect the following information:</p>
+                <ul>
+                    <li>Name</li>
+                    <li>Email address</li>
+                    <li>Phone number (if provided)</li>
+                    <li>Project details or messages submitted through contact forms</li>
+                    <li>Basic usage data (such as browser type, pages visited)</li>
+                </ul>
+            </section>
+
+            <!-- Section 3 -->
+            <section class="privacy-section" id="how-we-use">
+                <h2>3. How We Use Your Information</h2>
+                <p>We use your information to:</p>
+                <ul>
+                    <li>Respond to inquiries and client requests</li>
+                    <li>Communicate about projects and services</li>
+                    <li>Improve website performance and user experience</li>
+                </ul>
+            </section>
+            <!-- Section 4 -->
+            <section class="privacy-section" id="third-party">
+                <h2>4. Third Party Services</h2>
+                <p>We may use third-party services such as Render to host and deploy your website. When using these services, your information may be processed according to their respective privacy policies. We recommend reviewing their privacy terms before engaging our services.</p>
+            </section>
+            <!-- Section 5 -->
+            <section class="privacy-section" id="data-sharing">
+                <h2>5. Data Sharing</h2>
+                <p>We do not sell or rent your personal information. Your data is only used for communication and service-related purposes.</p>
+            </section>
+
+            <!-- Section 6 -->
+            <section class="privacy-section" id="data-security">
+                <h2>6. Data Security</h2>
+                <p>We take reasonable steps to protect your data. However, no online system is completely secure.</p>
+            </section>
+
+            <!-- Section 7 -->
+            <section class="privacy-section" id="user-rights">
+                <h2>7. Your Rights</h2>
+                <p>You may request to access, update, or delete your personal information by contacting us.</p>
+            </section>
+
+            <!-- Section 8 -->
+            <section class="privacy-section" id="external-links">
+                <h2>8. External Links</h2>
+                <p>Our website may contain links to other websites. We are not responsible for their privacy practices.</p>
+            </section>
+
+            <!-- Section 9 -->
+            <section class="privacy-section" id="changes">
+                <h2>9. Changes to This Policy</h2>
+                <p>We may update this Privacy Policy at any time. Updates will be posted on this page.</p>
+            </section>
+
+            <!-- Section 10 -->
+            <section class="privacy-section" id="contact">
+                <h2>10. Contact</h2>
+                <p>For any privacy-related concerns, contact:</p>
+                <ul>
+                    <li><strong>Email:</strong> <a href="mailto:shubhamnayani0110@gmail.com">shubhamnayani0110@gmail.com</a></li>
+                    <li><strong>Phone:</strong> <a href="tel:+919427209737">+91 94272 09737</a></li>
+                </ul>
+            </section>
+
+            <div class="back-to-top">
+                <a href="#introduction">↑ Back to Top</a>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            <p>&copy; 2024-2026 Shubham Developer. All rights reserved.</p>
+            <p>This Privacy Policy is effective as of April 2, 2026</p>
+        </div>
+    </div>
+
+    <script>
+        // Smooth scrolling for table of contents
+        document.querySelectorAll('.toc a').forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                const targetId = link.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    targetElement.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+
+        // Back to top button
+        const backToTopBtn = document.querySelector('.back-to-top');
+        if (backToTopBtn) {
+            backToTopBtn.addEventListener('click', (e) => {
+                e.preventDefault();
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+        }
+
+        // Add scroll animation
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -100px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.animation = 'slideIn 0.5s ease';
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('h2, h3, p, li').forEach(el => {
+            el.style.opacity = '0.9';
+            observer.observe(el);
+        });
+
+        // Print friendly
+        window.addEventListener('beforeprint', () => {
+            document.body.style.backgroundColor = 'white';
+        });
+    </script>
+
+    <style>
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media print {
+            body {
+                background: white;
+            }
+            .container {
+                box-shadow: none;
+            }
+            .toc {
+                page-break-after: always;
+            }
+        }
+    </style>
+</body>
+</html>
