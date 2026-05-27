@@ -503,3 +503,4 @@ document.querySelectorAll(".faq-question").forEach(btn=>{
   `;
   document.head.appendChild(style);
 })();
+
