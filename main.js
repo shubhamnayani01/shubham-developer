@@ -17,12 +17,16 @@
     initContactForm();
     initWAFabPulse();
     initCardInteractions();
+    initPhotos();
+    initLightbox();
   }
 
 
 
   const blinker = document.querySelector('.blinker');
+  if (blinker) {
     setInterval(() => blinker.style.opacity = blinker.style.opacity === '0' ? '1' : '0', 500);
+  }
   
   /* ═════════════════════════════════════════
      NAVBAR — scroll shadow + active state
@@ -367,6 +371,112 @@ document.querySelectorAll(".faq-question").forEach(btn=>{
   /* ═════════════════════════════════════════
      UTILITY — throttle
   ═════════════════════════════════════════ */
+  function initPhotos() {
+    const photos = document.querySelectorAll('.fade-photo');
+    const photosSection = document.getElementById('photographs');
+    const glow = document.getElementById('photosGlowFollow');
+
+    if (photos.length) {
+      if ('IntersectionObserver' in window) {
+        const observer = new IntersectionObserver(function (entries) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('photo-visible');
+              observer.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+
+        photos.forEach(function (photo) { observer.observe(photo); });
+      } else {
+        photos.forEach(function (photo) { photo.classList.add('photo-visible'); });
+      }
+    }
+
+    if (photosSection && glow) {
+      photosSection.addEventListener('mousemove', function (e) {
+        const rect = photosSection.getBoundingClientRect();
+        glow.style.left = (e.clientX - rect.left) + 'px';
+        glow.style.top = (e.clientY - rect.top) + 'px';
+      });
+    }
+  }
+
+  function initLightbox() {
+    const photoItems = document.querySelectorAll('.photo-item');
+    const lightbox = document.getElementById('lightbox');
+    const lbImg = document.getElementById('lbImg');
+    const lbDl = document.getElementById('lbDl');
+    const lbCounter = document.getElementById('lbCounter');
+    const closeBtn = document.getElementById('lbClose');
+    const backdrop = document.getElementById('lbBackdrop');
+    const prevBtn = document.getElementById('lbPrev');
+    const nextBtn = document.getElementById('lbNext');
+
+    if (!photoItems.length || !lightbox || !lbImg) return;
+
+    const photos = Array.from(photoItems).map(function (item) {
+      const img = item.querySelector('img');
+      const dl = item.querySelector('.photo-dl');
+      return {
+        src: dl ? dl.href : (img ? img.src : ''),
+        alt: img ? img.alt : ''
+      };
+    });
+    let currentIndex = 0;
+
+    function showPhoto(index) {
+      currentIndex = (index + photos.length) % photos.length;
+      const photo = photos[currentIndex];
+
+      lbImg.classList.remove('lb-loaded');
+      lbImg.src = photo.src;
+      lbImg.alt = photo.alt;
+      if (lbDl) lbDl.href = photo.src;
+      if (lbCounter) lbCounter.textContent = (currentIndex + 1) + ' / ' + photos.length;
+
+      requestAnimationFrame(function () {
+        lbImg.classList.add('lb-loaded');
+      });
+    }
+
+    function openLightbox(index) {
+      showPhoto(index);
+      lightbox.classList.add('lb-open');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeLightbox() {
+      lightbox.classList.remove('lb-open');
+      document.body.style.overflow = '';
+    }
+
+    photoItems.forEach(function (item, index) {
+      item.addEventListener('click', function () {
+        openLightbox(index);
+      });
+
+      const download = item.querySelector('.photo-dl');
+      if (download) {
+        download.addEventListener('click', function (e) {
+          e.stopPropagation();
+        });
+      }
+    });
+
+    if (closeBtn) closeBtn.addEventListener('click', closeLightbox);
+    if (backdrop) backdrop.addEventListener('click', closeLightbox);
+    if (prevBtn) prevBtn.addEventListener('click', function () { showPhoto(currentIndex - 1); });
+    if (nextBtn) nextBtn.addEventListener('click', function () { showPhoto(currentIndex + 1); });
+
+    document.addEventListener('keydown', function (e) {
+      if (!lightbox.classList.contains('lb-open')) return;
+      if (e.key === 'Escape') closeLightbox();
+      if (e.key === 'ArrowLeft') showPhoto(currentIndex - 1);
+      if (e.key === 'ArrowRight') showPhoto(currentIndex + 1);
+    });
+  }
+
   function throttle(fn, delay) {
     let last = 0;
     return function () {
